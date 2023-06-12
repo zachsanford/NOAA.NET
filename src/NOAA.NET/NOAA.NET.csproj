@@ -1,9 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
 	<LangVersion>11.0</LangVersion>
 	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	<Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +24,18 @@
 
   <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Alerts\" />
+    <Folder Include="Aviation\" />
+    <Folder Include="Gridpoints\" />
+    <Folder Include="Zones\" />
+    <Folder Include="Products\" />
+    <Folder Include="Radar\" />
+    <Folder Include="Points\" />
+    <Folder Include="Offices\" />
+    <Folder Include="Stations\" />
   </ItemGroup>
 
 </Project>
