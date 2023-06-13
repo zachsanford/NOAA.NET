@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Alerts\" />
     <Folder Include="Aviation\" />
     <Folder Include="Gridpoints\" />
     <Folder Include="Zones\" />
