@@ -5,7 +5,6 @@
 using System;
 using System.Net.Http;
 using System.Net.Http.Json;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace NOAA.NET.Services.Network;
@@ -17,17 +16,21 @@ namespace NOAA.NET.Services.Network;
 public abstract class NOAAClient<T>
 {
     /// <summary>
-    /// Gets or sets an abstract property that MUST be overridden.
+    /// Gets an abstract property that MUST be overridden.
     /// </summary>
-    public abstract string BaseURL { get; set; }
+    protected abstract string BaseURL { get; }
+
+    /// <summary>
+    /// Gets the Endpoint Type.
+    /// </summary>
+    protected abstract string EndpointType { get; }
 
     /// <summary>
     /// Calls a specific API endpoint.
     /// </summary>
-    /// <param name="typeMessage">State the endpoint as a string for error messages.</param>
     /// <returns>The specific model for that endpoint.</returns>
     /// <exception cref="Exception">Error trying to call the endpoint.</exception>
-    public virtual async Task<T> CallAPI(string typeMessage)
+    public virtual async Task<T> CallAPI()
     {
         T? apiResponse = default(T);
 
@@ -47,7 +50,7 @@ public abstract class NOAAClient<T>
             }
             catch (Exception ex)
             {
-                throw new Exception(message: $"Error trying to reach the {typeMessage} API endpoint. Exception: {ex}.", ex.InnerException);
+                throw new Exception(message: $"Error trying to reach the {this.EndpointType} API endpoint. Exception: {ex}.", ex.InnerException);
             }
         }
 
