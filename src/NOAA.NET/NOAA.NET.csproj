@@ -4,6 +4,10 @@
     <TargetFramework>net7.0</TargetFramework>
 	<LangVersion>11.0</LangVersion>
 	<Nullable>enable</Nullable>
+	  
+	<!-- Comment when pushing/creating a PR -->
+	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	  
   </PropertyGroup>
 
   <ItemGroup>
