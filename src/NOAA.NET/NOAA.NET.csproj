@@ -1,13 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
 	<LangVersion>11.0</LangVersion>
 	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	<Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
+      <NoWarn>SA0001</NoWarn>
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -23,6 +25,17 @@
 
   <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Aviation\" />
+    <Folder Include="Gridpoints\" />
+    <Folder Include="Zones\" />
+    <Folder Include="Products\" />
+    <Folder Include="Radar\" />
+    <Folder Include="Points\" />
+    <Folder Include="Offices\" />
+    <Folder Include="Stations\" />
   </ItemGroup>
 
 </Project>
