@@ -4,6 +4,9 @@
 
 using System;
 using System.Reflection;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("NOAA.NET.Tests")]
 
 namespace NOAA.NET.Extensions;
 
