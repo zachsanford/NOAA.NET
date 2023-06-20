@@ -4,17 +4,22 @@ using NOAA.NET.Alerts.Types;
 
 namespace NOAA.NET.Tests.Alerts;
 
-public class BuilderTests
+public class AlertBuilderTests
 {
     [Fact]
-    public void Test()
+    public void Builder_Working_Constructor()
     {
-        Builder builder = new()
+        // Arrange
+        AlertBuilder? builder = null;
+
+        // Act
+        builder = new()
         {
             Status = Status.Actual,
             Limit = 12
         };
 
+        // Assert
         Assert.Equal(Status.Actual, builder.Status);
         Assert.Equal(12, builder.Limit);
         Assert.Equal("actual", builder.Status.GetStringValue());

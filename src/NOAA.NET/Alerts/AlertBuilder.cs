@@ -1,4 +1,4 @@
-﻿// <copyright file="Builder.cs" company="Zach Sanford">
+﻿// <copyright file="AlertBuilder.cs" company="Zach Sanford">
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
@@ -9,7 +9,7 @@ namespace NOAA.NET.Alerts;
 /// <summary>
 /// Builder class for the Alert Endpoint.
 /// </summary>
-public class Builder
+public sealed class AlertBuilder
 {
     /// <summary>
     /// Gets or sets the Status Property.
@@ -40,6 +40,11 @@ public class Builder
     /// Gets or sets the Certainty Property.
     /// </summary>
     public Certainty? Certainty { get; set; }
+
+    /// <summary>
+    /// Gets or sets the Zone Property.
+    /// </summary>
+    public string? Zone { get; set; }
 
     /// <summary>
     /// Gets or sets the Limit Property.
