@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NOAA.NET.Extensions;
 using NOAA.NET.Interfaces;
+using NOAA.NET.Services;
 using NOAA.NET.Services.Network;
 
 namespace NOAA.NET.Alerts;
@@ -17,9 +18,11 @@ namespace NOAA.NET.Alerts;
 /// </summary>
 public sealed class AlertActiveWorker : IWorker<AlertResponse>
 {
-    private string _endpointPropertiesURL;
+    private readonly Task? _initialization;
+    private string? _endpointPropertiesURL;
     private bool _isFirst = true;
     private AlertActiveClient _client = new();
+    private ZoneChecker? _zoneChecker;
     private StringBuilder _stringBuilder = new("?");
 
     /// <summary>
@@ -30,6 +33,32 @@ public sealed class AlertActiveWorker : IWorker<AlertResponse>
     /// <param name="builder">Required <see cref="AlertBuilder"/> object.</param>
     /// <exception cref="ArgumentNullException"><see cref="AlertBuilder"/> NULL Exception.</exception>
     public AlertActiveWorker(AlertBuilder builder)
+    {
+        this._initialization = this.InitializeAsync(builder);
+    }
+
+    /// <summary>
+    /// Calls the API's Alert Endpoint.
+    /// </summary>
+    /// <returns><see cref="AlertResponse"/> payload.</returns>
+    /// <exception cref="Exception">NULL Exception.</exception>
+    public async Task<AlertResponse> CallEndpoint()
+    {
+        AlertResponse? alertResponse;
+
+        alertResponse = await this._client.CallAPI();
+
+        if (alertResponse != null)
+        {
+            return alertResponse;
+        }
+        else
+        {
+            throw new Exception(message: "Called Alert Active API Endpoint. Return payload is NULL.");
+        }
+    }
+
+    private async Task InitializeAsync(AlertBuilder builder)
     {
         if (builder == null)
         {
@@ -105,17 +134,18 @@ public sealed class AlertActiveWorker : IWorker<AlertResponse>
 
             if (builder.Zone != null)
             {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
+                this._zoneChecker = new(builder.Zone);
 
-                // TODO
-                // Add a checker to make sure that the string length
-                // is correct and to verify that the zone code is
-                // valid.
-                this._stringBuilder.Append("zone=" + builder.Zone);
-                this._isFirst = false;
+                if (await this._zoneChecker.TestZone())
+                {
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("zone=" + builder.Zone);
+                    this._isFirst = false;
+                }
             }
 
             if (builder.Limit != null)
@@ -131,27 +161,6 @@ public sealed class AlertActiveWorker : IWorker<AlertResponse>
 
             this._endpointPropertiesURL = this._stringBuilder.ToString();
             this._client.EndpointURL = this._endpointPropertiesURL;
-        }
-    }
-
-    /// <summary>
-    /// Calls the API's Alert Endpoint.
-    /// </summary>
-    /// <returns><see cref="AlertResponse"/> payload.</returns>
-    /// <exception cref="Exception">NULL Exception.</exception>
-    public async Task<AlertResponse> CallEndpoint()
-    {
-        AlertResponse? alertResponse;
-
-        alertResponse = await this._client.CallAPI();
-
-        if (alertResponse != null)
-        {
-            return alertResponse;
-        }
-        else
-        {
-            throw new Exception(message: "Called Alert Active API Endpoint. Return payload is NULL.");
         }
     }
 }

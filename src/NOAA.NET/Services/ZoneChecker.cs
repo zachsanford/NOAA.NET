@@ -3,9 +3,9 @@
 // </copyright>
 
 using System;
-using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using NOAA.NET.Interfaces;
 using NOAA.NET.Services.Network;
@@ -38,8 +38,15 @@ internal class ZoneChecker : IWorker<ZoneResponse>
         }
         else
         {
-            this._stringBuilder.Append(testInput);
-            this._client.EndpointURL = this._stringBuilder.ToString();
+            if (this.TestString(testInput))
+            {
+                this._stringBuilder.Append(testInput.ToUpper());
+                this._client.EndpointURL = this._stringBuilder.ToString();
+            }
+            else
+            {
+                throw new Exception(message: $"INCORRECT INPUT: {testInput} does not match the correct pattern.");
+            }
         }
     }
 
@@ -74,9 +81,34 @@ internal class ZoneChecker : IWorker<ZoneResponse>
         {
             ZoneResponse testResponse = await this.CallEndpoint();
 
-            return testResponse != null;
+            if (testResponse.Features != null)
+            {
+                return testResponse.Features.Length > 0;
+            }
+            else
+            {
+                return false;
+            }
         }
         catch
+        {
+            return false;
+        }
+    }
+
+    private bool TestString(string s)
+    {
+        string pattern = @"^(A[KLMNRSZ]|C[AOT]|D[CE]|F[LM]|G[AMU]|I[ADLN]|K[SY]
+                |L[ACEHMOS]|M[ADEHINOPST]|N[CDEHJMVY]|O[HKR]|P[AHKMRSWZ]|S[CDL]
+                |T[NX]|UT|V[AIT]|W[AIVY]|[HR]I)[CZ]\d{3}$";
+
+        if (s.Length == 6)
+        {
+            string upper = s.ToUpper();
+
+            return Regex.IsMatch(upper, pattern);
+        }
+        else
         {
             return false;
         }
