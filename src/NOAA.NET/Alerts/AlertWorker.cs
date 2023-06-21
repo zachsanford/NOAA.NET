@@ -87,7 +87,7 @@ public sealed class AlertWorker : IWorker<AlertResponse>
                 this._isFirst = false;
             }
 
-            if (builder.Region != null)
+            if (builder.Region != null && builder.Zone == null)
             {
                 if (!this._isFirst)
                 {
@@ -131,7 +131,8 @@ public sealed class AlertWorker : IWorker<AlertResponse>
                 this._isFirst = false;
             }
 
-            if (builder.Zone != null)
+            if ((builder.Zone != null && builder.Region == null) ||
+                (builder.Zone != null && builder.Region != null))
             {
                 this._zoneChecker = new(builder.Zone);
 
