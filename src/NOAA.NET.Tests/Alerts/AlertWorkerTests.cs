@@ -51,7 +51,7 @@ public class AlertWorkerTests
     //[InlineData(Status.Draft, MessageType.Alert, Region.GL, Urgency.Unknown, Severity.Moderate, null, null, 1)]
     //[InlineData(Status.Actual, MessageType.Alert, Region.GL, Urgency.Unknown, Severity.Moderate, Certainty.Likely, null, 1)]
     //[InlineData(Status.Actual, MessageType.Alert, Region.PI, Urgency.Immediate, Severity.Moderate, Certainty.Likely, "ORZ023", 1)]
-    [InlineData(null, null, null, null, null, null, "ORZ023", null)]
+    [InlineData(null, null, null, null, null, null, null, 2)]
     public async void Worker_Builder_Working(Status? statusParameter, MessageType? messageTypeParameter,
         Region? regionParameter, Urgency? urgencyParameter, Severity? severityParameter,
         Certainty? certaintyParameter, string? zoneParameter, int? limitParameter)
@@ -80,6 +80,6 @@ public class AlertWorkerTests
         Console.WriteLine("DELETE THIS LINE");
 
         // Assert
-        Assert.True(response.Features.Length == 0);
+        Assert.True(response.Features.Length == 2);
     }
 }
