@@ -19,7 +19,7 @@ namespace NOAA.NET.Services;
 /// Internal class used to check the validity
 /// of a zone input.
 /// </summary>
-internal class ZoneChecker : IWorker<ZoneResponse>
+internal sealed class ZoneChecker : IWorker<ZoneResponse>
 {
     private ZoneClient _client = new();
     private StringBuilder _stringBuilder = new("?id=");
@@ -27,25 +27,25 @@ internal class ZoneChecker : IWorker<ZoneResponse>
     /// <summary>
     /// Initializes a new instance of the <see cref="ZoneChecker"/> class.
     /// </summary>
-    /// <param name="testInput"><see cref="string"/> value representing
+    /// <param name="zoneParameter"><see cref="string"/> value representing
     /// a Zone Id.</param>
     /// <exception cref="ArgumentNullException">NULL Exception.</exception>
-    public ZoneChecker(string testInput)
+    public ZoneChecker(string zoneParameter)
     {
-        if (testInput == null)
+        if (zoneParameter == null)
         {
-            throw new ArgumentNullException(nameof(testInput));
+            throw new ArgumentNullException(nameof(zoneParameter));
         }
         else
         {
-            if (this.TestString(testInput))
+            if (this.TestString(zoneParameter))
             {
-                this._stringBuilder.Append(testInput.ToUpper());
+                this._stringBuilder.Append(zoneParameter.ToUpper());
                 this._client.EndpointURL = this._stringBuilder.ToString();
             }
             else
             {
-                throw new Exception(message: $"INCORRECT INPUT: {testInput} does not match the correct pattern.");
+                throw new Exception(message: $"INCORRECT INPUT: {zoneParameter} does not match the correct pattern.");
             }
         }
     }
