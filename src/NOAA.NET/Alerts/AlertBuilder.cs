@@ -22,6 +22,11 @@ public sealed class AlertBuilder
     public MessageType? MessageType { get; set; }
 
     /// <summary>
+    /// Gets or sets the Area Property.
+    /// </summary>
+    public string? Area { get; set; }
+
+    /// <summary>
     /// Gets or sets the Region Property.
     /// </summary>
     public Region? Region { get; set; }

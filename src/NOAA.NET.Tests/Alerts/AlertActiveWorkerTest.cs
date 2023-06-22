@@ -48,16 +48,16 @@ public class AlertActiveWorkerTest
     }
 
     [Theory]
-    [InlineData(Status.Actual, null, null, null, null, null, null, 50)]
-    //[InlineData(Status.Test, MessageType.Alert, null, null, null, null, null, 13)]
-    //[InlineData(Status.System, MessageType.Update, Region.PI, null, null, null, null, 100)]
-    //[InlineData(Status.Exercise, MessageType.Cancel, Region.GM, Urgency.Past, null, null, null, 75)]
-    //[InlineData(Status.Draft, MessageType.Alert, Region.GL, Urgency.Unknown, Severity.Moderate, null, null, 1)]
-    //[InlineData(Status.Actual, MessageType.Alert, Region.GL, Urgency.Unknown, Severity.Moderate, Certainty.Likely, null, 1)]
-    //[InlineData(Status.Actual, MessageType.Alert, Region.PI, Urgency.Immediate, Severity.Moderate, Certainty.Likely, "ORZ023", 1)]
-    //[InlineData(null, null, null, null, null, null, null, 5)]
+    [InlineData(Status.Actual, null, null, null, null, null, null, null, 50)]
+    [InlineData(Status.Test, MessageType.Alert, null, null, null, null, null, null, 13)]
+    [InlineData(Status.System, MessageType.Update, "OR", null, null, null, null, null, 100)]
+    [InlineData(Status.Exercise, MessageType.Cancel, "OR", Region.AT, null, null, null, null, 75)]
+    [InlineData(Status.Draft, MessageType.Alert, "OR", Region.AT, Urgency.Immediate, null, null, null, 1)]
+    [InlineData(Status.Actual, MessageType.Alert, "OR", Region.AT, Urgency.Immediate, Severity.Minor, null, null, 1)]
+    [InlineData(Status.Actual, MessageType.Alert, "OR", Region.AT, Urgency.Immediate, Severity.Minor, Certainty.Possible, null, 1)]
+    [InlineData(Status.Actual, MessageType.Alert, "OR", Region.AT, Urgency.Immediate, Severity.Minor, Certainty.Possible, "ORZ023", 1)]
     public async void Worker_Builder_Working(Status? statusParameter, MessageType? messageTypeParameter,
-    Region? regionParameter, Urgency? urgencyParameter, Severity? severityParameter,
+    string? areaParameter, Region? regionParameter, Urgency? urgencyParameter, Severity? severityParameter,
     Certainty? certaintyParameter, string? zoneParameter, int? limitParameter)
     {
         // Arrange
@@ -70,6 +70,7 @@ public class AlertActiveWorkerTest
         {
             Status = statusParameter,
             MessageType = messageTypeParameter,
+            Area = areaParameter,
             Region = regionParameter,
             Urgency = urgencyParameter,
             Severity = severityParameter,
@@ -81,15 +82,37 @@ public class AlertActiveWorkerTest
         worker = new(builder);
         response = await worker.CallEndpoint();
 
-        Console.WriteLine("DELETE THIS LINE");
+        // Assert
+        Assert.True(response.Features != null);
+    }
+
+    [Theory]
+    [InlineData("OR", null, null)]
+    [InlineData("OR", Region.PA, null)]
+    [InlineData("OR", Region.PA, "TXZ211")]
+    [InlineData("OR", null, "TXZ211")]
+    [InlineData(null, Region.PA, null)]
+    [InlineData(null, Region.PA, "TXZ211")]
+    [InlineData(null, null, "TXZ211")]
+    public async void Worker_Region_Area_Zone_Working(string? areaParameter, Region? regionParameter, string? zoneParameter)
+    {
+        // Arrange
+        AlertBuilder? builder = null;
+        AlertActiveWorker? worker = null;
+        AlertResponse? response = null;
+
+        // Act
+        builder = new()
+        {
+            Area = areaParameter,
+            Region = regionParameter,
+            Zone = zoneParameter
+        };
+
+        worker = new(builder);
+        response = await worker.CallEndpoint();
 
         // Assert
-        if (response.Features != null)
-        {
-            foreach (Feature feature in response.Features)
-            {
-                Assert.True(feature.Properties.Status == "Actual");
-            }
-        }
+        Assert.NotNull(response.Features);
     }
 }

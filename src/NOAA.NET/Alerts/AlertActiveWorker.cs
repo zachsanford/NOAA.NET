@@ -46,6 +46,11 @@ public sealed class AlertActiveWorker : IWorker<AlertResponse>
     {
         AlertResponse? alertResponse;
 
+        while (this._client.EndpointURL == null)
+        {
+            await Task.Delay(1);
+        }
+
         alertResponse = await this._client.CallAPI();
 
         if (alertResponse != null)
@@ -88,7 +93,19 @@ public sealed class AlertActiveWorker : IWorker<AlertResponse>
                 this._isFirst = false;
             }
 
-            if (builder.Region != null)
+            if ((builder.Area != null && builder.Region == null && builder.Zone == null) ||
+                (builder.Area != null && builder.Region != null && builder.Zone == null))
+            {
+                if (!this._isFirst)
+                {
+                    this._stringBuilder.Append("&");
+                }
+
+                this._stringBuilder.Append("area=" + builder.Area);
+                this._isFirst = false;
+            }
+
+            if (builder.Region != null && builder.Area == null && builder.Zone == null)
             {
                 if (!this._isFirst)
                 {
