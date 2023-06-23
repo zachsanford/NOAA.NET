@@ -23,6 +23,7 @@ public sealed class AlertActiveWorker : IWorker<AlertResponse>
     private bool _isFirst = true;
     private AlertActiveClient _client = new();
     private ZoneChecker? _zoneChecker;
+    private AreaChecker? _areaChecker;
     private StringBuilder _stringBuilder = new("?");
 
     /// <summary>
@@ -96,13 +97,18 @@ public sealed class AlertActiveWorker : IWorker<AlertResponse>
             if ((builder.Area != null && builder.Region == null && builder.Zone == null) ||
                 (builder.Area != null && builder.Region != null && builder.Zone == null))
             {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
+                this._areaChecker = new(builder.Area);
 
-                this._stringBuilder.Append("area=" + builder.Area);
-                this._isFirst = false;
+                if (this._areaChecker.TestArea())
+                {
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("area=" + builder.Area);
+                    this._isFirst = false;
+                }
             }
 
             if (builder.Region != null && builder.Area == null && builder.Zone == null)
