@@ -9,7 +9,7 @@ namespace NOAA.NET.Services.Network;
 /// <summary>
 /// Http client for the Glossary endpoint of the API.
 /// </summary>
-public sealed class GlossaryClient : NOAAClient<GlossaryResponse>
+internal sealed class GlossaryClient : NOAAClient<GlossaryResponse>
 {
     /// <inheritdoc/>
     protected override string BaseURL { get; } = @"https://api.weather.gov/glossary";

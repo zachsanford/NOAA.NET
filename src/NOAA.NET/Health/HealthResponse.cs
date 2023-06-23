@@ -1,14 +1,14 @@
-﻿// <copyright file="StatusResponse.cs" company="Zach Sanford">
+﻿// <copyright file="HealthResponse.cs" company="Zach Sanford">
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-namespace NOAA.NET.Services;
+namespace NOAA.NET.Health;
 
 /// <summary>
 /// Class to receive the status response from the
-/// Status API Endpoint.
+/// Health API Endpoint.
 /// </summary>
-public class StatusResponse
+public class HealthResponse
 {
     /// <summary>
     /// Gets or sets the Status field from the API Endpoint.

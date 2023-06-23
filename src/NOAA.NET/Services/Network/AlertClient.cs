@@ -9,7 +9,7 @@ namespace NOAA.NET.Services.Network;
 /// <summary>
 /// Http client for the Alert endpoint of the API.
 /// </summary>
-public sealed class AlertClient : NOAAClient<AlertResponse>
+internal sealed class AlertClient : NOAAClient<AlertResponse>
 {
     /// <inheritdoc/>
     protected override string BaseURL { get; } = @"https://api.weather.gov/alerts";

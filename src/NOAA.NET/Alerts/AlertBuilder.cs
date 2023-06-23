@@ -14,7 +14,7 @@ public sealed class AlertBuilder
     /// <summary>
     /// Gets or sets the Status Property.
     /// </summary>
-    public Status? Status { get; set; }
+    public Types.Status? Status { get; set; }
 
     /// <summary>
     /// Gets or sets the MessageType Property.

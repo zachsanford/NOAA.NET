@@ -1,4 +1,4 @@
-﻿// <copyright file="OptionsBuilder.cs" company="Zach Sanford">
+﻿// <copyright file="ZoneBuilder.cs" company="Zach Sanford">
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
@@ -9,7 +9,7 @@ namespace NOAA.NET.Zones;
 /// <summary>
 /// Builder class for the Zones Endpoint.
 /// </summary>
-public class OptionsBuilder
+public class ZoneBuilder
 {
     /// <summary>
     /// Gets or sets the Zone ID Property.
