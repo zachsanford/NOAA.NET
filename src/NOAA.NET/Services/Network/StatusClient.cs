@@ -7,7 +7,7 @@ namespace NOAA.NET.Services.Network;
 /// <summary>
 /// Http client for the Status endpoint of the API.
 /// </summary>
-public class StatusClient : NOAAClient<StatusResponse>
+public sealed class StatusClient : NOAAClient<StatusResponse>
 {
     /// <inheritdoc/>
     protected override string BaseURL { get; } = @"https://api.weather.gov/";

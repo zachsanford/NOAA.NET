@@ -6,15 +6,22 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
+using NOAA.NET.Extensions;
 
 namespace NOAA.NET.Services.Network;
 
 /// <summary>
 /// Abstract class for all of the endpoint HTTP Clients.
 /// </summary>
-/// <typeparam name="T">Type of endpoint.</typeparam>
+/// <typeparam name="T">Type of endpoint response.</typeparam>
 public abstract class NOAAClient<T>
 {
+    /// <summary>
+    /// Gets or sets the Endpoint extension of the base
+    /// URL.
+    /// </summary>
+    public virtual string? EndpointURL { get; set; }
+
     /// <summary>
     /// Gets an abstract property that MUST be overridden.
     /// </summary>
@@ -40,7 +47,7 @@ public abstract class NOAAClient<T>
 
             try
             {
-                using (HttpResponseMessage response = await httpClient.GetAsync(this.BaseURL))
+                using (HttpResponseMessage response = await httpClient.GetAsync(this.BaseURL + this.EndpointURL))
                 {
                     if (response.IsSuccessStatusCode)
                     {

@@ -6,7 +6,7 @@
 	<Nullable>enable</Nullable>
 	  
 	<!-- Comment when pushing/creating a PR -->
-	<!-- <TreatWarningsAsErrors>true</TreatWarningsAsErrors> -->
+	<!--<TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
 	  
   </PropertyGroup>
 
@@ -32,7 +32,6 @@
   <ItemGroup>
     <Folder Include="Aviation\" />
     <Folder Include="Gridpoints\" />
-    <Folder Include="Zones\" />
     <Folder Include="Products\" />
     <Folder Include="Radar\" />
     <Folder Include="Points\" />

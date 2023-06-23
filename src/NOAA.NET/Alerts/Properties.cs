@@ -3,6 +3,7 @@
 // </copyright>
 
 using System;
+using System.Text.Json.Serialization;
 
 namespace NOAA.NET.Alerts;
 
@@ -16,7 +17,8 @@ public class Properties
     /// <summary>
     /// Gets or sets the unique id of the alert message.
     /// </summary>
-    public string? id { get; set; }
+    [JsonPropertyName("@id")]
+    public string? MainId { get; set; }
 
     /// <summary>
     /// Gets or sets the type of the alert message.
