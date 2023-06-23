@@ -10,7 +10,7 @@ namespace NOAA.NET.Services.Network;
 /// Http client for the Alert Active Count endpoint
 /// of the API.
 /// </summary>
-public sealed class AlertActiveCountClient : NOAAClient<AlertActiveCountResponse>
+internal sealed class AlertActiveCountClient : NOAAClient<AlertActiveCountResponse>
 {
     /// <inheritdoc/>
     protected override string BaseURL { get; } = @"https://api.weather.gov/alerts/active/count";

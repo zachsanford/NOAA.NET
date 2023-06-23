@@ -6,7 +6,6 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using NOAA.NET.Extensions;
 
 namespace NOAA.NET.Services.Network;
 
@@ -14,7 +13,7 @@ namespace NOAA.NET.Services.Network;
 /// Abstract class for all of the endpoint HTTP Clients.
 /// </summary>
 /// <typeparam name="T">Type of endpoint response.</typeparam>
-public abstract class NOAAClient<T>
+internal abstract class NOAAClient<T>
 {
     /// <summary>
     /// Gets or sets the Endpoint extension of the base
