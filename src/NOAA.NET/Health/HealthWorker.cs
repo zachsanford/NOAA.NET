@@ -21,7 +21,7 @@ public sealed class HealthWorker : IWorker<HealthResponse>
     /// </summary>
     /// <returns><see cref="HealthResponse"/> payload.</returns>
     /// <exception cref="System.Exception">NULL Exception.</exception>
-    public async Task<HealthResponse> CallEndpoint()
+    public async Task<HealthResponse> CallEndpointAsync()
     {
         HealthResponse? healthResponse;
 

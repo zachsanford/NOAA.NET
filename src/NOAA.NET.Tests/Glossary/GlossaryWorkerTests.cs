@@ -27,7 +27,7 @@ public class GlossaryWorkerTests
 
         // Act
         worker = new();
-        response = await worker.CallEndpoint();
+        response = await worker.CallEndpointAsync();
 
         // Assert
         Assert.NotNull(response.Glossary);

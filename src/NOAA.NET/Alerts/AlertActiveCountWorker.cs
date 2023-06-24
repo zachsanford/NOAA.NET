@@ -23,7 +23,7 @@ public sealed class AlertActiveCountWorker : IWorker<AlertActiveCountResponse>
     /// </summary>
     /// <returns><see cref="AlertActiveCountResponse"/> payload.</returns>
     /// <exception cref="Exception">NULL Exception.</exception>
-    public async Task<AlertActiveCountResponse> CallEndpoint()
+    public async Task<AlertActiveCountResponse> CallEndpointAsync()
     {
         AlertActiveCountResponse? alertActiveCountResponse;
 

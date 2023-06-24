@@ -42,7 +42,7 @@ public sealed class AlertWorker : IWorker<AlertResponse>
     /// </summary>
     /// <returns><see cref="AlertResponse"/> payload.</returns>
     /// <exception cref="Exception">NULL Exception.</exception>
-    public async Task<AlertResponse> CallEndpoint()
+    public async Task<AlertResponse> CallEndpointAsync()
     {
         AlertResponse? alertResponse;
 
