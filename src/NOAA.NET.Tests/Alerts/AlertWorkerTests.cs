@@ -38,7 +38,7 @@ public class AlertWorkerTests
         builder = new();
 
         worker = new AlertWorker(builder);
-        response = await worker.CallEndpoint();
+        response = await worker.CallEndpointAsync();
 
         // Assert
         Assert.NotNull(response);
@@ -77,7 +77,7 @@ public class AlertWorkerTests
         };
 
         worker = new(builder);
-        response = await worker.CallEndpoint();
+        response = await worker.CallEndpointAsync();
 
         // Assert
         Assert.True(response.Features != null);
@@ -107,7 +107,7 @@ public class AlertWorkerTests
         };
 
         worker = new(builder);
-        response = await worker.CallEndpoint();
+        response = await worker.CallEndpointAsync();
 
         // Assert
         Assert.NotNull(response.Features);

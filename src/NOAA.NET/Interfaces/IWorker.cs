@@ -17,5 +17,5 @@ internal interface IWorker<T>
     /// Calls the specific API Endpoint.
     /// </summary>
     /// <returns><see cref="Task"/> of a specific response.</returns>
-    Task<T> CallEndpoint();
+    Task<T> CallEndpointAsync();
 }

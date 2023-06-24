@@ -55,7 +55,7 @@ internal sealed class ZoneChecker : IWorker<ZoneResponse>
     /// </summary>
     /// <returns><see cref="ZoneResponse"/> payload.</returns>
     /// <exception cref="Exception">NULL Exception.</exception>
-    public async Task<ZoneResponse> CallEndpoint()
+    public async Task<ZoneResponse> CallEndpointAsync()
     {
         ZoneResponse? zoneResponse;
 
@@ -79,7 +79,7 @@ internal sealed class ZoneChecker : IWorker<ZoneResponse>
     {
         try
         {
-            ZoneResponse testResponse = await this.CallEndpoint();
+            ZoneResponse testResponse = await this.CallEndpointAsync();
 
             if (testResponse.Features != null)
             {

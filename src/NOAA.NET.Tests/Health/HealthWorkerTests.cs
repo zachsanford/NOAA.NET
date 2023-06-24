@@ -26,7 +26,7 @@ public class HealthWorkerTests
 
         // Act
         worker = new();
-        response = await worker.CallEndpoint();
+        response = await worker.CallEndpointAsync();
 
         // Assert
         Assert.NotNull(response.Status);

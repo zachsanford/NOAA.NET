@@ -21,7 +21,7 @@ public sealed class GlossaryWorker : IWorker<GlossaryResponse>
     /// </summary>
     /// <returns><see cref="GlossaryResponse"/> payload.</returns>
     /// <exception cref="Exception">NULL Exception.</exception>
-    public async Task<GlossaryResponse> CallEndpoint()
+    public async Task<GlossaryResponse> CallEndpointAsync()
     {
         GlossaryResponse? glossaryResponse;
 
