@@ -1,4 +1,4 @@
-﻿// <copyright file="CwsuBuilder.cs" company="Zach Sanford">
+﻿// <copyright file="CwsusBuilder.cs" company="Zach Sanford">
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
@@ -11,7 +11,7 @@ namespace NOAA.NET.Aviation;
 /// <summary>
 /// Builder Class for the Aviation/CWSUS Endpoint.
 /// </summary>
-public class CwsuBuilder
+public class CwsusBuilder
 {
     /// <summary>
     /// Gets or sets the NWS CWSU ID Property.
