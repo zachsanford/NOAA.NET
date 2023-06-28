@@ -1,5 +1,4 @@
 ﻿using NOAA.NET.Aviation;
-using NOAA.NET.Extensions;
 using NOAA.NET.Aviation.Types;
 
 namespace NOAA.NET.Tests.Aviation;
