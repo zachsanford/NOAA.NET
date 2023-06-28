@@ -17,15 +17,4 @@ public class CwsusBuilder
     /// Gets or sets the NWS CWSU ID Property.
     /// </summary>
     public CwsuId CwsuId { get; set; }
-
-    /// <summary>
-    /// Gets or sets the Date Property.
-    /// </summary>
-    [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
-    public DateTime? Date { get; set; }
-
-    /// <summary>
-    /// Gets or sets the Sequence Number Property.
-    /// </summary>
-    public int? Sequence { get; set; }
 }
