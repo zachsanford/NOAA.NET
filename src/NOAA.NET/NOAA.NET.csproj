@@ -30,7 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Aviation\" />
     <Folder Include="Gridpoints\" />
     <Folder Include="Products\" />
     <Folder Include="Radar\" />
