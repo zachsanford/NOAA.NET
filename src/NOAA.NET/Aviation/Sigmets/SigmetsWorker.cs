@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NOAA.NET.Interfaces;
 using NOAA.NET.Services.Network;
+using static NOAA.NET.Services.AtsuChecker;
 
 namespace NOAA.NET.Aviation.Sigmets;
 
@@ -32,6 +33,7 @@ public sealed class SigmetsWorker : IWorker<SigmetsResponse>
     /// Initializes a new instance of the <see cref="SigmetsWorker"/> class.
     /// </summary>
     /// <param name="builder"><see cref="SigmetsBuilder"/> object.</param>
+    /// <exception cref="Exception">Not valid input.</exception>
     public SigmetsWorker(SigmetsBuilder builder)
     {
         if (builder == null)
@@ -80,10 +82,16 @@ public sealed class SigmetsWorker : IWorker<SigmetsResponse>
                     this._stringBuilder.Append("&");
                 }
 
-                // TODO:
-                // Add an internal checker for the ATSU regex pattern. ^[A-Z]{3,4}$
-                this._stringBuilder.Append(builder.Atsu);
-                this._isFirst = false;
+                if (Check(builder.Atsu))
+                {
+                    this._stringBuilder.Append(builder.Atsu);
+                    this._isFirst = false;
+                }
+                else
+                {
+                    throw new Exception(message: $"The {nameof(builder.Atsu)} value of {builder.Atsu} is not a valid input." +
+                        $"Please check your input and try again.");
+                }
             }
 
             if (builder.Start != null)
