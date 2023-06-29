@@ -8,6 +8,8 @@
 	<!-- Comment when pushing/creating a PR -->
 	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	  
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  
   </PropertyGroup>
 
   <ItemGroup>
