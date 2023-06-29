@@ -1,7 +1,7 @@
-﻿using NOAA.NET.Aviation;
+﻿using NOAA.NET.Aviation.Cwsus;
 using NOAA.NET.Aviation.Types;
 
-namespace NOAA.NET.Tests.Aviation;
+namespace NOAA.NET.Tests.Aviation.Cwsus;
 
 public class CwsusWorkerTests
 {

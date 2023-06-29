@@ -4,7 +4,7 @@
 
 using System;
 
-namespace NOAA.NET.Aviation;
+namespace NOAA.NET.Aviation.Cwsus;
 
 /// <summary>
 /// A representation of a CenterWeatherAdvisory

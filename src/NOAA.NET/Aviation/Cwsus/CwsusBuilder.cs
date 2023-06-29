@@ -6,7 +6,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using NOAA.NET.Aviation.Types;
 
-namespace NOAA.NET.Aviation;
+namespace NOAA.NET.Aviation.Cwsus;
 
 /// <summary>
 /// Builder Class for the Aviation/CWSUS Endpoint.

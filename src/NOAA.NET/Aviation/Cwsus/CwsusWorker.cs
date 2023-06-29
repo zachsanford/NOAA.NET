@@ -10,7 +10,7 @@ using NOAA.NET.Extensions;
 using NOAA.NET.Interfaces;
 using NOAA.NET.Services.Network;
 
-namespace NOAA.NET.Aviation;
+namespace NOAA.NET.Aviation.Cwsus;
 
 /// <summary>
 /// Public worker for the API's Aviation/CWSUS
