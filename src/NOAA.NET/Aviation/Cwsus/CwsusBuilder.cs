@@ -2,8 +2,6 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-using System;
-using System.ComponentModel.DataAnnotations;
 using NOAA.NET.Aviation.Types;
 
 namespace NOAA.NET.Aviation.Cwsus;
