@@ -49,6 +49,7 @@ public sealed class SigmetsWorker : IWorker<SigmetsResponse>
                     this._stringBuilder.Append("&");
                 }
 
+                this._stringBuilder.Append("start=");
                 this._stringBuilder.Append(builder.Start.Value.ToString("s") + 'Z');
                 this._isFirst = false;
             }
@@ -60,6 +61,7 @@ public sealed class SigmetsWorker : IWorker<SigmetsResponse>
                     this._stringBuilder.Append("&");
                 }
 
+                this._stringBuilder.Append("end=");
                 this._stringBuilder.Append(builder.End.Value.ToString("s") + 'Z');
                 this._isFirst = false;
             }
@@ -71,6 +73,7 @@ public sealed class SigmetsWorker : IWorker<SigmetsResponse>
                     this._stringBuilder.Append("&");
                 }
 
+                this._stringBuilder.Append("date=");
                 this._stringBuilder.Append(builder.Date.Value.ToString("yyyy-MM-dd"));
                 this._isFirst = false;
             }
@@ -84,6 +87,7 @@ public sealed class SigmetsWorker : IWorker<SigmetsResponse>
 
                 if (Check(builder.Atsu))
                 {
+                    this._stringBuilder.Append("atsu=");
                     this._stringBuilder.Append(builder.Atsu);
                     this._isFirst = false;
                 }
@@ -94,17 +98,6 @@ public sealed class SigmetsWorker : IWorker<SigmetsResponse>
                 }
             }
 
-            if (builder.Start != null)
-            {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
-
-                this._stringBuilder.Append(builder.Start.Value.ToString("s") + 'Z');
-                this._isFirst = false;
-            }
-
             if (builder.Sequence != null)
             {
                 if (!this._isFirst)
@@ -112,6 +105,7 @@ public sealed class SigmetsWorker : IWorker<SigmetsResponse>
                     this._stringBuilder.Append("&");
                 }
 
+                this._stringBuilder.Append("sequence=");
                 this._stringBuilder.Append(builder.Sequence);
                 this._isFirst = false;
             }

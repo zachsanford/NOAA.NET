@@ -3,7 +3,7 @@ using NOAA.NET.Alerts.Types;
 
 namespace NOAA.NET.Tests.Alerts;
 
-public class AlertActiveWorkerTest
+public class AlertActiveWorkerTests
 {
     [Fact]
     public void Worker_Working_Constructor()
@@ -57,8 +57,8 @@ public class AlertActiveWorkerTest
     [InlineData(Status.Actual, MessageType.Alert, "OR", Region.AT, Urgency.Immediate, Severity.Minor, Certainty.Possible, null, 1)]
     [InlineData(Status.Actual, MessageType.Alert, "OR", Region.AT, Urgency.Immediate, Severity.Minor, Certainty.Possible, "ORZ023", 1)]
     public async void Worker_Builder_Working(Status? statusParameter, MessageType? messageTypeParameter,
-    string? areaParameter, Region? regionParameter, Urgency? urgencyParameter, Severity? severityParameter,
-    Certainty? certaintyParameter, string? zoneParameter, int? limitParameter)
+        string? areaParameter, Region? regionParameter, Urgency? urgencyParameter, Severity? severityParameter,
+        Certainty? certaintyParameter, string? zoneParameter, int? limitParameter)
     {
         // Arrange
         AlertBuilder? builder = null;
@@ -83,7 +83,7 @@ public class AlertActiveWorkerTest
         response = await worker.CallEndpointAsync();
 
         // Assert
-        Assert.True(response.Features != null);
+        Assert.NotNull(response.Features);
     }
 
     [Theory]
