@@ -27,7 +27,9 @@ public class SigmetsBuilder
     public DateTime? Date { get; set; }
 
     /// <summary>
-    /// Gets or sets the ATSU Identifier Property.
+    /// Gets or sets the ATSU Identifier Property. The <see cref="string"/>
+    /// needs to match the following <see cref="System.Text.RegularExpressions.Regex"/>
+    /// pattern: <c>^[A-Z]{3,4}$</c>.
     /// </summary>
     public string? Atsu { get; set; }
 
