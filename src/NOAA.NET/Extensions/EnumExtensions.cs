@@ -21,7 +21,7 @@ internal static class EnumExtensions
     /// Extension method that gets the custom attribute value
     /// for an internal <see cref="Enum"/> type.
     /// </summary>
-    /// <param name="value"><see cref="this"/> <see cref="Enum"/>.</param>
+    /// <param name="value"><see cref="Enum"/>.</param>
     /// <returns><see cref="string"/> value for that <see cref="Enum"/> type value.</returns>
     internal static string GetStringValue(this Enum value)
     {

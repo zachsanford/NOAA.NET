@@ -8,6 +8,8 @@
 	<!-- Comment when pushing/creating a PR -->
 	<!--<TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
 	  
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,7 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Aviation\" />
     <Folder Include="Gridpoints\" />
     <Folder Include="Products\" />
     <Folder Include="Radar\" />
