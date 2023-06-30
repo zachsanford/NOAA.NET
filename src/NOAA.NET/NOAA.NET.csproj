@@ -6,7 +6,7 @@
 	<Nullable>enable</Nullable>
 	  
 	<!-- Comment when pushing/creating a PR -->
-	<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	<!--<TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
 	  
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	  
