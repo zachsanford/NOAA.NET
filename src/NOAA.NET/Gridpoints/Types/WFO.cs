@@ -198,601 +198,559 @@ public enum WFO
     DLH,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Des Moines, Iowa type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("DMX")]
     DMX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Detroit/Pontiac, Michigan type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("DTX")]
     DTX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Quad Cities, Iowa/Illinois type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("DVN")]
     DVN,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Kansas City/Pleasant Hill, Missouri type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("EAX")]
     EAX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Eureka, California type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("EKA")]
     EKA,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// El Paso, Texas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("EPZ")]
     EPZ,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Austin/San Antonio, Texas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("EWX")]
     EWX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Peachtree City, Georgia type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("FFC")]
     FFC,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Grand Forks, North Dakota type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("FGF")]
     FGF,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Flagstaff, Arizona type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("FGZ")]
     FGZ,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Sioux Falls, South Dakota type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("FSD")]
     FSD,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Fort Worth/Dallas, Texas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("FWD")]
     FWD,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Glasgow, Montana type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("GGW")]
     GGW,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Hastings, Nebraska type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("GID")]
     GID,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Grand Junction, Colorado type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("GJT")]
     GJT,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Goodland, Kansas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("GLD")]
     GLD,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Green Bay, Wisconsin type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("GRB")]
     GRB,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Grand Rapids, Michigan type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("GRR")]
     GRR,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Greenville-Spartanburg, South Carolina type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("GSP")]
     GSP,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Tiyan, Guam type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("GUM")]
     GUM,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Gray/Portland, Maine type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("GYX")]
     GYX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Honolulu, Hawaii type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("HFO")]
     HFO,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Houston/Galveston, Texas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("HGX")]
     HGX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// San Joaquin Valley, CA type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("HNX")]
     HNX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
-    /// </summary>
-    [StringValue("HPA")]
-    HPA,
-
-    /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Huntsville, Alabama type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("HUN")]
     HUN,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Wichita, Kansas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("ICT")]
     ICT,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Wilmington, North Carolina type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("ILM")]
     ILM,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Wilmington, Ohio type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("ILN")]
     ILN,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Central Illinois type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("ILX")]
     ILX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Indianapolis, Indiana type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("IND")]
     IND,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Northern Indiana type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("IWX")]
     IWX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Jackson, Mississippi type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("JAN")]
     JAN,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Jacksonville, Florida type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("JAX")]
     JAX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Jackson, Kentucky type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("JKL")]
     JKL,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Key West, Florida type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("KEY")]
     KEY,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// North Platte, Nebraska type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LBF")]
     LBF,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Lake Charles, Louisiana type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LCH")]
     LCH,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// New Orleans/Baton Rouge, Louisiana type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LIX")]
     LIX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Elko, Nevada type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LKN")]
     LKN,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Louisville, Kentucky type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LMK")]
     LMK,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Chicago, Illinois type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LOT")]
     LOT,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Los Angeles, California type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LOX")]
     LOX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// St. Louis, Missouri type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LSX")]
     LSX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Lubbock, Texas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LUB")]
     LUB,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Baltimore/Washington type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LWX")]
     LWX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Little Rock, Arkansas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("LZK")]
     LZK,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Midland, Texas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MAF")]
     MAF,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Memphis, Tennessee type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MEG")]
     MEG,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Miami, Florida type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MFL")]
     MFL,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Medford, Oregon type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MFR")]
     MFR,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Newport/Morehead City, North Carolina type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MHX")]
     MHX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Milwaukee/Sullivan, Wisconsin type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MKX")]
     MKX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Melbourne, Florida type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MLB")]
     MLB,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Mobile/Pensacola type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MOB")]
     MOB,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Twin Cities, Minnesota type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MPX")]
     MPX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Marquette, Michigan type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MQT")]
     MQT,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Morristown, Tennessee type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MRX")]
     MRX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Missoula, Montana type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MSO")]
     MSO,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// San Francisco Bay Area, California type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("MTR")]
     MTR,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
-    /// </summary>
-    [StringValue("NH1")]
-    NH1,
-
-    /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
-    /// </summary>
-    [StringValue("NH2")]
-    NH2,
-
-    /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Omaha/Valley, Nebraska type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("OAX")]
     OAX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Nashville, Tennessee type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("OHX")]
     OHX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// New York, New York type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("OKX")]
     OKX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
-    /// </summary>
-    [StringValue("ONA")]
-    ONA,
-
-    /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
-    /// </summary>
-    [StringValue("ONP")]
-    ONP,
-
-    /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Spokane, WA type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("OTX")]
     OTX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Norman, Oklahoma type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("OUN")]
     OUN,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Paducah, Kentucky type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("PAH")]
     PAH,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Pittsburgh, Pennslyvania type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("PBZ")]
     PBZ,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Pendleton, Oregon type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("PDT")]
     PDT,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Philadelphia/Mount Holly, Pennslyvania type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("PHI")]
     PHI,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Pocatello, Idaho type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("PIH")]
     PIH,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
-    /// </summary>
-    [StringValue("PPG")]
-    PPG,
-
-    /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Portland, Oregon type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("PQR")]
     PQR,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Phoenix, Arizona type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("PSR")]
     PSR,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Pueblo, Colorado type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("PUB")]
     PUB,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Raleigh, North Carolina type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("RAH")]
     RAH,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Reno, Nevada type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("REV")]
     REV,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Riverton, Wyoming type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("RIW")]
     RIW,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Charleston, West Virginia type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("RLX")]
     RLX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Blacksburg, Virginia type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("RNK")]
     RNK,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Seattle/Tacoma, Washington type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("SEW")]
     SEW,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Springfield, Missouri type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("SGF")]
     SGF,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// San Diego, California type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("SGX")]
     SGX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Shreveport, Louisiana type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("SHV")]
     SHV,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// San Angelo, Texas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("SJT")]
     SJT,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// San Juan, Puerto Rico type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("SJU")]
     SJU,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Salt Lake City, Utah type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("SLC")]
     SLC,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Sacremento, California type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("STO")]
     STO,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
-    /// </summary>
-    [StringValue("STU")]
-    STU,
-
-    /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Tallahassee, Florida type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("TAE")]
     TAE,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Tampa Bay Area, Florida type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("TBW")]
     TBW,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Great Falls, Montana type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("TFX")]
     TFX,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Topeka, Kansas type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("TOP")]
     TOP,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Tulsa, Oklahoma type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("TSA")]
     TSA,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Tucson, Arizona type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("TWC")]
     TWC,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Rapid City, South Dakota type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("UNR")]
     UNR,
 
     /// <summary>
-    /// Albuquerque, New Mexico type for the "WFO" value of the Gridpoints Endpoint.
+    /// Las Vegas, Nevada type for the "WFO" value of the Gridpoints Endpoint.
     /// </summary>
     [StringValue("VEF")]
     VEF
