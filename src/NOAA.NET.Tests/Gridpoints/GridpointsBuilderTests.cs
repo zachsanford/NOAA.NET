@@ -25,6 +25,6 @@ public class GridpointsBuilderTests
         // Assert
         Assert.Equal(expectedWFO, builder.Wfo);
         Assert.Equal(expectedX, builder.XCoordinate);
-        Assert.Equal(expectedY, builder.XCoordinate);
+        Assert.Equal(expectedY, builder.YCoordinate);
     }
 }
