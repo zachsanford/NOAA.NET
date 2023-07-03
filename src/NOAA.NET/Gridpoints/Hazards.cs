@@ -16,7 +16,7 @@ public class Hazards
     public string? Uom { get; set; }
 
     /// <summary>
-    /// Gets or sets an array of <see cref="Values"/>.
+    /// Gets or sets an array of <see cref="HazardValues"/>.
     /// </summary>
-    public Values[]? Values { get; set; }
+    public HazardValues[]? Values { get; set; }
 }
