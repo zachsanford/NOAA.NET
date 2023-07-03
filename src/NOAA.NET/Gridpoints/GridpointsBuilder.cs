@@ -9,7 +9,7 @@ namespace NOAA.NET.Gridpoints;
 /// <summary>
 /// Builder class for the Gridpoints Endpoint.
 /// </summary>
-internal sealed class GridpointsBuilder
+public sealed class GridpointsBuilder
 {
     /// <summary>
     /// Gets or sets the <see cref="WFO"/> type, for the
