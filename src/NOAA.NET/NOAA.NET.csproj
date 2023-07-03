@@ -32,6 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Gridpoints\Forecast\" />
     <Folder Include="Products\" />
     <Folder Include="Radar\" />
     <Folder Include="Points\" />

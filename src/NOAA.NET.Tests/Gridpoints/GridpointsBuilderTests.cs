@@ -1,4 +1,4 @@
-﻿using NOAA.NET.Gridpoints;
+﻿using NOAA.NET.Gridpoints.Base;
 using NOAA.NET.Gridpoints.Types;
 
 namespace NOAA.NET.Tests.Gridpoints;
@@ -9,7 +9,7 @@ public class GridpointsBuilderTests
     public void Builder_Working_Constructor()
     {
         // Arrange
-        GridpointsBuilder? builder = null;
+        GridpointsBaseBuilder? builder = null;
         WFO expectedWFO = WFO.MFR;
         byte expectedX = 100;
         byte expectedY = 200;

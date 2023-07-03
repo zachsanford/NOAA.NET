@@ -1,4 +1,4 @@
-﻿using NOAA.NET.Gridpoints;
+﻿using NOAA.NET.Gridpoints.Base;
 using NOAA.NET.Gridpoints.Types;
 
 namespace NOAA.NET.Tests.Gridpoints;
@@ -9,9 +9,9 @@ public class GridpointsWorkerTests
     public async void Worker_Working_Constructor()
     {
         // Arrange
-        GridpointsBuilder? builder = null;
-        GridpointsWorker? worker = null;
-        GridpointsResponse? response = null;
+        GridpointsBaseBuilder? builder = null;
+        GridpointsBaseWorker? worker = null;
+        GridpointsBaseResponse? response = null;
 
         // Act
         builder = new()
