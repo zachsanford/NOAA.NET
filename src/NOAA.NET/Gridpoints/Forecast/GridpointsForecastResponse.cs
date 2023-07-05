@@ -1,4 +1,4 @@
-﻿// <copyright file="ForecastResponse.cs" company="Zach Sanford">
+﻿// <copyright file="GridpointsForecastResponse.cs" company="Zach Sanford">
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
@@ -9,7 +9,7 @@ namespace NOAA.NET.Gridpoints.Forecast;
 /// Please refer to IETF RFC 7946 for
 /// information of the GeoJSON format.
 /// </summary>
-public class ForecastResponse
+public class GridpointsForecastResponse
 {
     /// <summary>
     /// Gets or sets the Context object Property.
