@@ -1,9 +1,9 @@
 ﻿using NOAA.NET.Gridpoints.Base;
 using NOAA.NET.Gridpoints.Types;
 
-namespace NOAA.NET.Tests.Gridpoints;
+namespace NOAA.NET.Tests.Gridpoints.Base;
 
-public class GridpointsWorkerTests
+public class GridpointsBaseWorkerTests
 {
     [Fact]
     public async void Worker_Working_Constructor()
