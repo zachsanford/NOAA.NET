@@ -13,17 +13,17 @@ namespace NOAA.NET.Gridpoints.Forecast;
 public sealed class GridpointsForecastBuilder
 {
     /// <summary>
-    /// Gets or sets the Is Hourly flag, indicating
-    /// whether or not to use the Hourly Endpoint.
-    /// Defaults to false if left unspecified.
-    /// </summary>
-    public bool? IsHourly { get; set; } = false;
-
-    /// <summary>
     /// Gets or sets the Units in textual output Property.
     /// Defaults to US if left unspecified.
     /// </summary>
     public Units? Units { get; set; } = Types.Units.US;
+
+    /// <summary>
+    /// Gets or sets a value indicating whether the
+    /// Hourly flag is enabled for the Hourly Endpoint.
+    /// Defaults to false if left unspecified.
+    /// </summary>
+    public bool IsHourly { get; set; } = false;
 
     /// <summary>
     /// Gets or sets the <see cref="WFO"/> type, for the

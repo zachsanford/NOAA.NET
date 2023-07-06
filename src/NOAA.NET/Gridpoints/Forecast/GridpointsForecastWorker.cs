@@ -41,6 +41,11 @@ public sealed class GridpointsForecastWorker : IWorker<GridpointsForecastRespons
             this._stringBuilder.Append(builder.YCoordinate.ToString());
             this._stringBuilder.Append("/forecast");
 
+            if (builder.IsHourly)
+            {
+                this._stringBuilder.Append("/hourly");
+            }
+
             if (builder.Units != null)
             {
                 this._stringBuilder.Append("?units=");
