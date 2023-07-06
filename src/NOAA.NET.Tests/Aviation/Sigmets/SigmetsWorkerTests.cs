@@ -1,5 +1,4 @@
 ﻿using NOAA.NET.Aviation.Sigmets;
-using System.Diagnostics.CodeAnalysis;
 
 namespace NOAA.NET.Tests.Aviation.Sigmets;
 
