@@ -11,12 +11,12 @@ namespace NOAA.NET.Aviation.Cwsus;
 public class CwsusResponse
 {
     /// <summary>
-    /// Gets or sets the <see cref="Context"/> Property.
+    /// Gets or sets the <see cref="Context"/> property.
     /// </summary>
     public Context? Context { get; set; }
 
     /// <summary>
-    /// Gets or sets the Type Property.
+    /// Gets or sets the Type property.
     /// </summary>
     public string? Type { get; set; }
 

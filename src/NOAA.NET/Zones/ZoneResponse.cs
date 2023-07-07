@@ -12,7 +12,7 @@ namespace NOAA.NET.Zones;
 public class ZoneResponse
 {
     /// <summary>
-    /// Gets or sets the Type Property.
+    /// Gets or sets the Type property.
     /// </summary>
     public string? Type { get; set; }
 

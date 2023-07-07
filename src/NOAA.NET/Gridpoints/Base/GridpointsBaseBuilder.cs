@@ -13,19 +13,19 @@ public sealed class GridpointsBaseBuilder
 {
     /// <summary>
     /// Gets or sets the <see cref="WFO"/> type, for the
-    /// Weather Forecast Office Property.
+    /// Weather Forecast Office property.
     /// </summary>
     public required WFO Wfo { get; set; }
 
     /// <summary>
     /// Gets or sets the forecast grid X coordinate
-    /// Property.
+    /// property.
     /// </summary>
     public required byte XCoordinate { get; set; }
 
     /// <summary>
     /// Gets or sets the forecast grid Y coordinate
-    /// Property.
+    /// property.
     /// </summary>
     public required byte YCoordinate { get; set; }
 }

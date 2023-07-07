@@ -12,22 +12,22 @@ namespace NOAA.NET.Gridpoints.Forecast;
 public class GridpointsForecastResponse
 {
     /// <summary>
-    /// Gets or sets the Context object Property.
+    /// Gets or sets the Context object property.
     /// </summary>
     public object[]? Context { get; set; }
 
     /// <summary>
-    /// Gets or sets the Type Property.
+    /// Gets or sets the Type property.
     /// </summary>
     public string? Type { get; set; }
 
     /// <summary>
-    /// Gets or sets the <see cref="NOAA.NET.Gridpoints.Forecast.Geometry"/> Property.
+    /// Gets or sets the <see cref="NOAA.NET.Gridpoints.Forecast.Geometry"/> property.
     /// </summary>
     public Geometry? Geometry { get; set; }
 
     /// <summary>
-    /// Gets or sets the <see cref="NOAA.NET.Gridpoints.Forecast.Properties"/> Property.
+    /// Gets or sets the <see cref="NOAA.NET.Gridpoints.Forecast.Properties"/> property.
     /// </summary>
     public Properties? Properties { get; set; }
 }

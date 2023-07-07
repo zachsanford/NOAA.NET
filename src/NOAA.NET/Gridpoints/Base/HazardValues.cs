@@ -10,7 +10,7 @@ namespace NOAA.NET.Gridpoints.Base;
 public class HazardValues
 {
     /// <summary>
-    /// Gets or sets the Valid Times Property.
+    /// Gets or sets the Valid Times property.
     /// </summary>
     public string? ValidTimes { get; set; }
 

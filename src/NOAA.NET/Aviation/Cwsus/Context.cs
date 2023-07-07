@@ -10,7 +10,7 @@ namespace NOAA.NET.Aviation.Cwsus;
 public class Context
 {
     /// <summary>
-    /// Gets or sets the Version Number Property.
+    /// Gets or sets the Version Number property.
     /// </summary>
     public string? Version { get; set; }
 }

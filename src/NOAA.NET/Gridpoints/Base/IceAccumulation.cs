@@ -11,7 +11,7 @@ public class IceAccumulation
 {
     /// <summary>
     /// Gets or sets the Unit of Measurment
-    /// Property.
+    /// property.
     /// </summary>
     public string? Uom { get; set; }
 

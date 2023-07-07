@@ -12,7 +12,7 @@ namespace NOAA.NET.Aviation.Cwsus;
 public class CwsusBuilder
 {
     /// <summary>
-    /// Gets or sets the NWS CWSU ID Property.
+    /// Gets or sets the NWS CWSU ID property.
     /// </summary>
     public CwsuId CwsuId { get; set; }
 }

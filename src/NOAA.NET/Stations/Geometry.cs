@@ -2,7 +2,7 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-namespace NOAA.NET.Gridpoints.Base;
+namespace NOAA.NET.Stations;
 
 /// <summary>
 /// A GeoJSON geometry object. Please refer to IETF RFC 7946
@@ -16,7 +16,7 @@ public class Geometry
     public string? Type { get; set; }
 
     /// <summary>
-    /// Gets or sets the Coordinates collection property.
+    /// Gets or sets the Coordinates property.
     /// </summary>
-    public float[][][]? Coordinates { get; set; }
+    public float[]? Coordinates { get; set; }
 }

@@ -1,13 +1,13 @@
-﻿// <copyright file="DewPoint.cs" company="Zach Sanford">
+﻿// <copyright file="Elevation.cs" company="Zach Sanford">
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-namespace NOAA.NET.Gridpoints.Forecast;
+namespace NOAA.NET.Stations;
 
 /// <summary>
-/// A representation of a Dew Point object.
+/// A representation of an Elevation object.
 /// </summary>
-public class DewPoint
+public class Elevation
 {
     /// <summary>
     /// Gets or sets the Unit Code property.

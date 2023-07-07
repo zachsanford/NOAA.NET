@@ -12,7 +12,7 @@ namespace NOAA.NET.Gridpoints.Base;
 public class Weather
 {
     /// <summary>
-    /// Gets or sets the Values Property.
+    /// Gets or sets the Values property.
     /// </summary>
     [JsonPropertyName("values")]
     public WeatherValues[]? Values { get; set; }

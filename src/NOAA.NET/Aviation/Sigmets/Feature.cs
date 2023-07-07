@@ -10,17 +10,17 @@ namespace NOAA.NET.Aviation.Sigmets;
 public class Feature
 {
     /// <summary>
-    /// Gets or sets the Type Property.
+    /// Gets or sets the Type property.
     /// </summary>
     public string? Type { get; set; }
 
     /// <summary>
-    /// Gets or sets the <see cref="Geometry"/> Property.
+    /// Gets or sets the <see cref="Geometry"/> property.
     /// </summary>
     public Geometry? Geometry { get; set; }
 
     /// <summary>
-    /// Gets or sets the <see cref="Properties"/> Property.
+    /// Gets or sets the <see cref="Properties"/> property.
     /// </summary>
     public Properties? Properties { get; set; }
 }
