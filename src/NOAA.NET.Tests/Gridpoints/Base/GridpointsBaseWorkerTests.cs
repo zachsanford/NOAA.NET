@@ -1,5 +1,5 @@
 ﻿using NOAA.NET.Gridpoints.Base;
-using NOAA.NET.Gridpoints.Types;
+using NOAA.NET.Types;
 
 namespace NOAA.NET.Tests.Gridpoints.Base;
 

@@ -4,7 +4,7 @@
 
 using NOAA.NET.Extensions;
 
-namespace NOAA.NET.Alerts.Types;
+namespace NOAA.NET.Types;
 
 /// <summary>
 /// Urgency enum for the "urgency" input of the Alert Endpoint.

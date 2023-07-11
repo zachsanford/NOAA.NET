@@ -4,7 +4,7 @@
 
 using NOAA.NET.Extensions;
 
-namespace NOAA.NET.Alerts.Types;
+namespace NOAA.NET.Types;
 
 /// <summary>
 /// Certainty enum for the "certainty" input of the Alert Endpoint.

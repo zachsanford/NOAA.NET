@@ -4,7 +4,7 @@
 
 using NOAA.NET.Extensions;
 
-namespace NOAA.NET.Alerts.Types;
+namespace NOAA.NET.Types;
 
 /// <summary>
 /// Region enum used for the "region" input on the Alert Endpoint.

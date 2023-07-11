@@ -1,5 +1,5 @@
 ﻿using NOAA.NET.Aviation.Cwsus;
-using NOAA.NET.Aviation.Types;
+using NOAA.NET.Types;
 
 namespace NOAA.NET.Tests.Aviation.Cwsus;
 

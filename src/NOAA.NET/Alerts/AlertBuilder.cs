@@ -2,7 +2,7 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-using NOAA.NET.Alerts.Types;
+using NOAA.NET.Types;
 
 namespace NOAA.NET.Alerts;
 
@@ -14,7 +14,7 @@ public sealed class AlertBuilder
     /// <summary>
     /// Gets or sets the Status property.
     /// </summary>
-    public Types.Status? Status { get; set; }
+    public Status? Status { get; set; }
 
     /// <summary>
     /// Gets or sets the MessageType property.
@@ -24,7 +24,7 @@ public sealed class AlertBuilder
     /// <summary>
     /// Gets or sets the Area property.
     /// </summary>
-    public string? Area { get; set; }
+    public Areas? Area { get; set; }
 
     /// <summary>
     /// Gets or sets the Region property.

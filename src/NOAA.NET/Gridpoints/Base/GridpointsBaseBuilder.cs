@@ -2,7 +2,7 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-using NOAA.NET.Gridpoints.Types;
+using NOAA.NET.Types;
 
 namespace NOAA.NET.Gridpoints.Base;
 

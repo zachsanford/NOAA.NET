@@ -4,7 +4,7 @@
 
 using NOAA.NET.Extensions;
 
-namespace NOAA.NET.Gridpoints.Types;
+namespace NOAA.NET.Types;
 
 /// <summary>
 /// Units enum for the Gridpoints Forecast

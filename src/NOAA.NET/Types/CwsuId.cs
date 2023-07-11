@@ -4,7 +4,7 @@
 
 using NOAA.NET.Extensions;
 
-namespace NOAA.NET.Aviation.Types;
+namespace NOAA.NET.Types;
 
 /// <summary>
 /// CWSU ID enum for the "cwsuId" input of the Aviation/CWSUS Endpoint.

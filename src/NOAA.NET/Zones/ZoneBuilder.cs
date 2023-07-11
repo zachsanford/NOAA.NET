@@ -2,7 +2,7 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-using NOAA.NET.Zones.Types;
+using NOAA.NET.Types;
 
 namespace NOAA.NET.Zones;
 

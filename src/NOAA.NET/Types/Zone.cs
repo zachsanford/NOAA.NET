@@ -4,7 +4,7 @@
 
 using NOAA.NET.Extensions;
 
-namespace NOAA.NET.Zones.Types;
+namespace NOAA.NET.Types;
 
 /// <summary>
 /// Zone Type enum for the "type" input of the Zones Endpoint.

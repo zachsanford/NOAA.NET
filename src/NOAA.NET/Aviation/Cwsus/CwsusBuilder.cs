@@ -2,7 +2,7 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-using NOAA.NET.Aviation.Types;
+using NOAA.NET.Types;
 
 namespace NOAA.NET.Aviation.Cwsus;
 

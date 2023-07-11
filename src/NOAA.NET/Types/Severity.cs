@@ -4,7 +4,7 @@
 
 using NOAA.NET.Extensions;
 
-namespace NOAA.NET.Alerts.Types;
+namespace NOAA.NET.Types;
 
 /// <summary>
 /// Severity enum for the "severity" input of the Alert Endpoint.

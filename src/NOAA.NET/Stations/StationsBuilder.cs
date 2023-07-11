@@ -2,8 +2,6 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-using NOAA.NET.Collections;
-
 namespace NOAA.NET.Stations;
 
 /// <summary>

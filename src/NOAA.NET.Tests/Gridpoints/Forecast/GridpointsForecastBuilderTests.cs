@@ -1,5 +1,5 @@
 ﻿using NOAA.NET.Gridpoints.Forecast;
-using NOAA.NET.Gridpoints.Types;
+using NOAA.NET.Types;
 
 namespace NOAA.NET.Tests.Gridpoints.Forecast;
 

@@ -4,7 +4,7 @@
 
 using NOAA.NET.Extensions;
 
-namespace NOAA.NET.Gridpoints.Types;
+namespace NOAA.NET.Types;
 
 /// <summary>
 /// Weather Field Office enum for the "WFO" input of the Gridpoints Endpoint.
