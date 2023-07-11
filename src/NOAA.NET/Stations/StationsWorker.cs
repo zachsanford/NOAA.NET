@@ -15,7 +15,6 @@ namespace NOAA.NET.Stations;
 public sealed class StationsWorker : IWorker<StationsResponse>
 {
     // private readonly Task? _initialization;
-    // private string? _endpointPropertiesURL;
     // private bool _isFirst = true;
     // private StringBuilder _stringBuilder = new("?");
 

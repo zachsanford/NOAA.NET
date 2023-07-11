@@ -18,7 +18,6 @@ namespace NOAA.NET.Gridpoints.Forecast;
 public sealed class GridpointsForecastWorker : IWorker<GridpointsForecastResponse>
 {
     private readonly GridpointsForecastBuilder _builder;
-    private string? _endpointPropertiesURL;
     private GridpointsForecastClient _client = new();
     private StringBuilder _stringBuilder = new("/");
 
@@ -52,8 +51,7 @@ public sealed class GridpointsForecastWorker : IWorker<GridpointsForecastRespons
                 this._stringBuilder.Append(builder.Units.GetStringValue());
             }
 
-            this._endpointPropertiesURL = this._stringBuilder.ToString();
-            this._client.EndpointURL = this._endpointPropertiesURL;
+            this._client.EndpointURL = this._stringBuilder.ToString();
         }
     }
 

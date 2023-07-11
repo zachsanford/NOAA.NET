@@ -18,7 +18,6 @@ namespace NOAA.NET.Aviation.Cwsus;
 /// </summary>
 public sealed class CwsusWorker : IWorker<CwsusResponse>
 {
-    private string? _endpointPropertiesURL;
     private CwsusClient _client = new();
     private StringBuilder _stringBuilder = new("/");
 
@@ -37,8 +36,7 @@ public sealed class CwsusWorker : IWorker<CwsusResponse>
         {
             this._stringBuilder.Append(builder.CwsuId.GetStringValue());
             this._stringBuilder.Append("/cwas");
-            this._endpointPropertiesURL = this._stringBuilder.ToString();
-            this._client.EndpointURL = this._endpointPropertiesURL;
+            this._client.EndpointURL = this._stringBuilder.ToString();
         }
     }
 

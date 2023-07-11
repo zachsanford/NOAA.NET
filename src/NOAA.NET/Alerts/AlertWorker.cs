@@ -18,7 +18,6 @@ namespace NOAA.NET.Alerts;
 public sealed class AlertWorker : IWorker<AlertResponse>
 {
     private readonly Task? _initialization;
-    private string? _endpointPropertiesURL;
     private bool _isFirst = true;
     private AlertClient _client = new();
     private ZoneChecker? _zoneChecker;
@@ -175,8 +174,7 @@ public sealed class AlertWorker : IWorker<AlertResponse>
                 this._isFirst = false;
             }
 
-            this._endpointPropertiesURL = this._stringBuilder.ToString();
-            this._client.EndpointURL = this._endpointPropertiesURL;
+            this._client.EndpointURL = this._stringBuilder.ToString();
         }
     }
 }
