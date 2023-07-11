@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using NOAA.NET.Extensions;
 using NOAA.NET.Interfaces;
+using NOAA.NET.Services;
+using NOAA.NET.Services.Network;
 
 namespace NOAA.NET.Stations;
 
@@ -17,6 +19,8 @@ public sealed class StationsWorker : IWorker<StationsResponse>
 {
     private readonly Task? _initialization;
     private bool _isFirst = true;
+    private StationIdChecker? _checker;
+    private StationsClient _client = new();
     private StringBuilder _stringBuilder = new("?");
 
     /// <summary>
@@ -32,13 +36,29 @@ public sealed class StationsWorker : IWorker<StationsResponse>
     }
 
     /// <summary>
-    /// NEED TO IMPLEMENT.
+    /// Calls the API's Stations Endpoint.
     /// </summary>
-    /// <returns>NEED.</returns>
-    /// <exception cref="System.NotImplementedException">NEEDED.</exception>
-    public Task<StationsResponse> CallEndpointAsync()
+    /// <returns><see cref="StationsResponse"/> payload.</returns>
+    /// <exception cref="Exception">NULL Exception.</exception>
+    public async Task<StationsResponse> CallEndpointAsync()
     {
-        throw new System.NotImplementedException();
+        StationsResponse? stationsResponse;
+
+        while (this._client.EndpointURL == null)
+        {
+            await Task.Delay(1);
+        }
+
+        stationsResponse = await this._client.CallAPI();
+
+        if (stationsResponse != null)
+        {
+            return stationsResponse;
+        }
+        else
+        {
+            throw new Exception(message: "Called the Stations API Endpoint. Return payload is NULL.");
+        }
     }
 
     private async Task InitializeAsync(StationsBuilder builder)
@@ -51,14 +71,19 @@ public sealed class StationsWorker : IWorker<StationsResponse>
         {
             if (builder.Id != null)
             {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
+                this._checker = new(builder.Id);
 
-                // TODO
-                // Add a StationsId Checker to check the validity
-                // of the Builder's Id Property.
+                if (await this._checker.TestStationId())
+                {
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("id=");
+                    this._stringBuilder.Append(builder.Id);
+                    this._isFirst = false;
+                }
             }
 
             if (builder.State != null)
