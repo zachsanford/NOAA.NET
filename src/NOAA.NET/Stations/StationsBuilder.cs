@@ -2,6 +2,8 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
+using NOAA.NET.Types;
+
 namespace NOAA.NET.Stations;
 
 /// <summary>
@@ -18,7 +20,7 @@ public sealed class StationsBuilder
     /// <summary>
     /// Gets or sets the state/marine area code property.
     /// </summary>
-    public string? State { get; set; }
+    public Areas? State { get; set; }
 
     /// <summary>
     /// Gets or sets the limit or returned results. Defaults
