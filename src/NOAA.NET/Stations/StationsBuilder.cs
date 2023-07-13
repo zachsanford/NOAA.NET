@@ -26,7 +26,7 @@ public sealed class StationsBuilder
     /// Gets or sets the limit or returned results. Defaults
     /// to 500 if left unset. Max value is 500.
     /// </summary>
-    public ushort? Limit { get; set; } = 500;
+    public ushort Limit { get; set; } = 500;
 
     /// <summary>
     /// Gets or sets the pagination cursor for the next

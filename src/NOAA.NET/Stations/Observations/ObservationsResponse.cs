@@ -5,7 +5,7 @@
 namespace NOAA.NET.Stations.Observations;
 
 /// <summary>
-/// A representation of the Stations\Observations
+/// A representation of the Stations/Observation
 /// Endpoint response.
 /// </summary>
 public class ObservationsResponse

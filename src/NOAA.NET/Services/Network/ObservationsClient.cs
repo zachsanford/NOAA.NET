@@ -7,7 +7,7 @@ using NOAA.NET.Stations.Observations;
 namespace NOAA.NET.Services.Network;
 
 /// <summary>
-/// Http client for the Stations\Observations endpoint of the API.
+/// Http client for the Stations/Observation endpoint of the API.
 /// </summary>
 internal sealed class ObservationsClient : NOAAClient<ObservationsResponse>
 {
