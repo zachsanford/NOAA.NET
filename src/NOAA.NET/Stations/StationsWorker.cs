@@ -81,7 +81,7 @@ public sealed class StationsWorker : IWorker<StationsResponse>
                     }
 
                     this._stringBuilder.Append("id=");
-                    this._stringBuilder.Append(builder.Id);
+                    this._stringBuilder.Append(builder.Id.ToUpper());
                     this._isFirst = false;
                 }
             }

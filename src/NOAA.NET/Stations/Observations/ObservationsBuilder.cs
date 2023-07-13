@@ -25,7 +25,7 @@ public class ObservationsBuilder
     /// Gets or sets the Limit property. Defaults to
     /// 1 if left unset. Max value is 500.
     /// </summary>
-    public ushort Limit { get; set; } = 1;
+    public ushort? Limit { get; set; } = 1;
 
     /// <summary>
     /// Gets or sets the Observation Station ID property.
