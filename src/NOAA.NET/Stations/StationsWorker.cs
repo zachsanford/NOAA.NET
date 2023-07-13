@@ -129,6 +129,8 @@ public sealed class StationsWorker : IWorker<StationsResponse>
                 this._stringBuilder.Append(builder.Cursor);
                 this._isFirst = false;
             }
+
+            this._client.EndpointURL = this._stringBuilder.ToString();
         }
     }
 }
