@@ -35,7 +35,6 @@
     <Folder Include="Products\" />
     <Folder Include="Radar\" />
     <Folder Include="Points\" />
-    <Folder Include="Offices\" />
   </ItemGroup>
 
 </Project>
