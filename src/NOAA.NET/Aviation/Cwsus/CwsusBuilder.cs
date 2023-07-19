@@ -9,7 +9,7 @@ namespace NOAA.NET.Aviation.Cwsus;
 /// <summary>
 /// Builder Class for the Aviation/CWSUS Endpoint.
 /// </summary>
-public class CwsusBuilder
+public sealed class CwsusBuilder
 {
     /// <summary>
     /// Gets or sets the NWS CWSU ID property.

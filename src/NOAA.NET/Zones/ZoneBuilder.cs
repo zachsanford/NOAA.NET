@@ -9,7 +9,7 @@ namespace NOAA.NET.Zones;
 /// <summary>
 /// Builder class for the Zones Endpoint.
 /// </summary>
-public class ZoneBuilder
+public sealed class ZoneBuilder
 {
     /// <summary>
     /// Gets or sets the Zone ID property.

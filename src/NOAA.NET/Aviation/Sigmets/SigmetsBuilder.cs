@@ -9,7 +9,7 @@ namespace NOAA.NET.Aviation.Sigmets;
 /// <summary>
 /// Builder Class for the Aviation/SIGMETs Endpoint.
 /// </summary>
-public class SigmetsBuilder
+public sealed class SigmetsBuilder
 {
     /// <summary>
     /// Gets or sets the Start Time property.
