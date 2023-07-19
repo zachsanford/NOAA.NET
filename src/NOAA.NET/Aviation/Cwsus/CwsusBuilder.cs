@@ -2,17 +2,17 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-using NOAA.NET.Aviation.Types;
+using NOAA.NET.Types;
 
 namespace NOAA.NET.Aviation.Cwsus;
 
 /// <summary>
 /// Builder Class for the Aviation/CWSUS Endpoint.
 /// </summary>
-public class CwsusBuilder
+public sealed class CwsusBuilder
 {
     /// <summary>
-    /// Gets or sets the NWS CWSU ID Property.
+    /// Gets or sets the NWS CWSU ID property.
     /// </summary>
     public CwsuId CwsuId { get; set; }
 }

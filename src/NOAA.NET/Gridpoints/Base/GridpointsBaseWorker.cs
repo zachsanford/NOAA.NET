@@ -17,7 +17,6 @@ namespace NOAA.NET.Gridpoints.Base;
 public sealed class GridpointsBaseWorker : IWorker<GridpointsBaseResponse>
 {
     private readonly GridpointsBaseBuilder _builder;
-    private string? _endpointPropertiesURL;
     private GridpointsBaseClient _client = new();
     private StringBuilder _stringBuilder = new("/");
 
@@ -38,8 +37,7 @@ public sealed class GridpointsBaseWorker : IWorker<GridpointsBaseResponse>
             this._stringBuilder.Append(builder.Wfo.GetStringValue() + '/');
             this._stringBuilder.Append(builder.XCoordinate.ToString() + ',');
             this._stringBuilder.Append(builder.YCoordinate.ToString());
-            this._endpointPropertiesURL = this._stringBuilder.ToString();
-            this._client.EndpointURL = this._endpointPropertiesURL;
+            this._client.EndpointURL = this._stringBuilder.ToString();
         }
     }
 

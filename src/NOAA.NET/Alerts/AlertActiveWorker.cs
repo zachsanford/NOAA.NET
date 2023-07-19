@@ -19,11 +19,9 @@ namespace NOAA.NET.Alerts;
 public sealed class AlertActiveWorker : IWorker<AlertResponse>
 {
     private readonly Task? _initialization;
-    private string? _endpointPropertiesURL;
     private bool _isFirst = true;
     private AlertActiveClient _client = new();
     private ZoneChecker? _zoneChecker;
-    private AreaChecker? _areaChecker;
     private StringBuilder _stringBuilder = new("?");
 
     /// <summary>
@@ -97,18 +95,13 @@ public sealed class AlertActiveWorker : IWorker<AlertResponse>
             if ((builder.Area != null && builder.Region == null && builder.Zone == null) ||
                 (builder.Area != null && builder.Region != null && builder.Zone == null))
             {
-                this._areaChecker = new(builder.Area);
-
-                if (this._areaChecker.TestArea())
+                if (!this._isFirst)
                 {
-                    if (!this._isFirst)
-                    {
-                        this._stringBuilder.Append("&");
-                    }
-
-                    this._stringBuilder.Append("area=" + builder.Area);
-                    this._isFirst = false;
+                    this._stringBuilder.Append("&");
                 }
+
+                this._stringBuilder.Append("area=" + builder.Area);
+                this._isFirst = false;
             }
 
             if (builder.Region != null && builder.Area == null && builder.Zone == null)
@@ -182,8 +175,7 @@ public sealed class AlertActiveWorker : IWorker<AlertResponse>
                 this._isFirst = false;
             }
 
-            this._endpointPropertiesURL = this._stringBuilder.ToString();
-            this._client.EndpointURL = this._endpointPropertiesURL;
+            this._client.EndpointURL = this._stringBuilder.ToString();
         }
     }
 }

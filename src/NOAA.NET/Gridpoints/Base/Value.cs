@@ -12,28 +12,28 @@ namespace NOAA.NET.Gridpoints.Base;
 public class Value
 {
     /// <summary>
-    /// Gets or sets the Coverage Property.
+    /// Gets or sets the Coverage property.
     /// </summary>
     public string? Coverage { get; set; }
 
     /// <summary>
-    /// Gets or sets the Weather Property.
+    /// Gets or sets the Weather property.
     /// </summary>
     public string? Weather { get; set; }
 
     /// <summary>
-    /// Gets or sets the Intensity Property.
+    /// Gets or sets the Intensity property.
     /// </summary>
     public object? Intensity { get; set; }
 
     /// <summary>
-    /// Gets or sets the Visibility Property.
+    /// Gets or sets the Visibility property.
     /// </summary>
     [JsonPropertyName("visibility")]
     public WeatherVisibility? Visibility { get; set; }
 
     /// <summary>
-    /// Gets or sets the array of Attributes Property.
+    /// Gets or sets the array of Attributes property.
     /// </summary>
     public object[]? Attributes { get; set; }
 }

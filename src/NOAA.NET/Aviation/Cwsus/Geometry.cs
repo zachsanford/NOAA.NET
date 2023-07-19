@@ -12,12 +12,12 @@ namespace NOAA.NET.Aviation.Cwsus;
 public class Geometry
 {
     /// <summary>
-    /// Gets or sets the Type Property.
+    /// Gets or sets the Type property.
     /// </summary>
     public string? Type { get; set; }
 
     /// <summary>
-    /// Gets or sets the Coordinates Property.
+    /// Gets or sets the Coordinates property.
     /// </summary>
     public float[][][]? Coordinates { get; set; }
 }

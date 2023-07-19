@@ -72,7 +72,7 @@ internal sealed class ZoneChecker : IWorker<ZoneResponse>
     }
 
     /// <summary>
-    /// Tests the zone input for validity.
+    /// Tests the validity of the zone input.
     /// </summary>
     /// <returns><see cref="bool"/> value of the validity.</returns>
     internal async Task<bool> TestZone()

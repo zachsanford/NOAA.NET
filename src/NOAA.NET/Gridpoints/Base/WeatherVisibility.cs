@@ -11,12 +11,12 @@ namespace NOAA.NET.Gridpoints.Base;
 public class WeatherVisibility
 {
     /// <summary>
-    /// Gets or sets the Unit Code Property.
+    /// Gets or sets the Unit Code property.
     /// </summary>
     public string? UnitCode { get; set; }
 
     /// <summary>
-    /// Gets or sets the Value Property.
+    /// Gets or sets the Value property.
     /// </summary>
     public float? Value { get; set; }
 }

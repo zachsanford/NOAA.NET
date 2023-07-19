@@ -12,7 +12,7 @@ namespace NOAA.NET.Gridpoints.Forecast;
 public class Geometry
 {
     /// <summary>
-    /// Gets or sets the Type Property.
+    /// Gets or sets the Type property.
     /// </summary>
     public string? Type { get; set; }
 

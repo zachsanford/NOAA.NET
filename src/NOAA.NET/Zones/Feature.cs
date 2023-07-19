@@ -17,7 +17,7 @@ public class Feature
     public string? Id { get; set; }
 
     /// <summary>
-    /// Gets or sets the Type Property.
+    /// Gets or sets the Type property.
     /// </summary>
     public string? Type { get; set; }
 

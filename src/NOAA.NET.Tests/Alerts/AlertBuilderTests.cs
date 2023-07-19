@@ -1,6 +1,6 @@
 ﻿using NOAA.NET.Alerts;
 using NOAA.NET.Extensions;
-using NOAA.NET.Alerts.Types;
+using NOAA.NET.Types;
 
 namespace NOAA.NET.Tests.Alerts;
 

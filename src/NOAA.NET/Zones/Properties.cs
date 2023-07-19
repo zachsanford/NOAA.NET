@@ -34,27 +34,27 @@ public class Properties
     public string? MainType { get; set; }
 
     /// <summary>
-    /// Gets or sets the Id Property.
+    /// Gets or sets the Id property.
     /// </summary>
     public string? Id { get; set; }
 
     /// <summary>
-    /// Gets or sets the Type Property.
+    /// Gets or sets the Type property.
     /// </summary>
     public string? Type { get; set; }
 
     /// <summary>
-    /// Gets or sets the Name Property.
+    /// Gets or sets the Name property.
     /// </summary>
     public string? Name { get; set; }
 
     /// <summary>
-    /// Gets or sets the Effective Date Property.
+    /// Gets or sets the Effective Date property.
     /// </summary>
     public DateTime? EffectiveDate { get; set; }
 
     /// <summary>
-    /// Gets or sets the Expiration Date Property.
+    /// Gets or sets the Expiration Date property.
     /// </summary>
     public DateTime? ExpirationDate { get; set; }
 
@@ -65,23 +65,23 @@ public class Properties
     public string[]? CWA { get; set; }
 
     /// <summary>
-    /// Gets or sets the Forecast Offices Property.
+    /// Gets or sets the Forecast Offices property.
     /// </summary>
     public string[]? ForecastOffices { get; set; }
 
     /// <summary>
-    /// Gets or sets the Time Zone Property.
+    /// Gets or sets the Time Zone property.
     /// </summary>
     public string[]? TimeZone { get; set; }
 
     /// <summary>
     /// Gets or sets the Observation
-    /// Stations Property.
+    /// Stations property.
     /// </summary>
     public string[]? ObservationStations { get; set; }
 
     /// <summary>
-    /// Gets or sets the Radar Station Property.
+    /// Gets or sets the Radar Station property.
     /// </summary>
     public string? RadarStation { get; set; }
 }

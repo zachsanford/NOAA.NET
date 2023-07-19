@@ -11,27 +11,27 @@ namespace NOAA.NET.Gridpoints.Base;
 public class GridpointsBaseResponse
 {
     /// <summary>
-    /// Gets or sets the Context Property.
+    /// Gets or sets the Context property.
     /// </summary>
     public object[]? Context { get; set; }
 
     /// <summary>
-    /// Gets or sets the Id Property.
+    /// Gets or sets the Id property.
     /// </summary>
     public string? Id { get; set; }
 
     /// <summary>
-    /// Gets or sets the Type Property.
+    /// Gets or sets the Type property.
     /// </summary>
     public string? Type { get; set; }
 
     /// <summary>
-    /// Gets or sets the Geometry Property.
+    /// Gets or sets the Geometry property.
     /// </summary>
     public Geometry? Geometry { get; set; }
 
     /// <summary>
-    /// Gets or sets the Properties Property.
+    /// Gets or sets the Properties property.
     /// </summary>
     public Properties? Properties { get; set; }
 }

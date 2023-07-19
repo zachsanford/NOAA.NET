@@ -13,12 +13,12 @@ namespace NOAA.NET.Gridpoints.Base;
 public class HazardSubvalues
 {
     /// <summary>
-    /// Gets or sets the Phenomenon Property.
+    /// Gets or sets the Phenomenon property.
     /// </summary>
     public string? Phenomenon { get; set; }
 
     /// <summary>
-    /// Gets or sets the Significance Property.
+    /// Gets or sets the Significance property.
     /// </summary>
     public string? Significance { get; set; }
 

@@ -11,12 +11,12 @@ namespace NOAA.NET.Gridpoints.Base;
 public class Values
 {
     /// <summary>
-    /// Gets or sets the Valid Time Property.
+    /// Gets or sets the Valid Time property.
     /// </summary>
     public string? ValidTime { get; set; }
 
     /// <summary>
-    /// Gets or sets the Value Property.
+    /// Gets or sets the Value property.
     /// </summary>
     public float? Value { get; set; }
 }

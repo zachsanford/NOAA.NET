@@ -16,7 +16,6 @@ namespace NOAA.NET.Aviation.Sigmets;
 /// </summary>
 public sealed class SigmetsWorker : IWorker<SigmetsResponse>
 {
-    private string? _endpointPropertiesURL;
     private bool _isFirst = true;
     private SigmetsClient _client = new();
     private StringBuilder _stringBuilder = new("?");
@@ -110,8 +109,7 @@ public sealed class SigmetsWorker : IWorker<SigmetsResponse>
                 this._isFirst = false;
             }
 
-            this._endpointPropertiesURL = this._stringBuilder.ToString();
-            this._client.EndpointURL = this._endpointPropertiesURL;
+            this._client.EndpointURL = this._stringBuilder.ToString();
         }
     }
 
