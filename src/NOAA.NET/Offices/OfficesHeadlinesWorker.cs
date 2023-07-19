@@ -51,7 +51,7 @@ public sealed class OfficesHeadlinesWorker : IWorker<OfficesHeadlinesResponse>
 
         officesHeadlinesResponse = await this._client.CallAPI();
 
-        if (officesHeadlinesResponse.Graph != null)
+        if (officesHeadlinesResponse.Context != null)
         {
             return officesHeadlinesResponse;
         }

@@ -2,6 +2,8 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
+using System.Text.Json.Serialization;
+
 namespace NOAA.NET.Offices;
 
 /// <summary>
@@ -15,6 +17,7 @@ public class OfficesHeadlinesResponse
     /// <see cref="NOAA.NET.Offices.Context"/>
     /// property.
     /// </summary>
+    [JsonPropertyName("@context")]
     public Context? Context { get; set; }
 
     /// <summary>
@@ -22,5 +25,6 @@ public class OfficesHeadlinesResponse
     /// <see cref="NOAA.NET.Offices.Graph"/>
     /// collection property.
     /// </summary>
+    [JsonPropertyName("@graph")]
     public Graph[]? Graph { get; set; }
 }

@@ -48,7 +48,9 @@ public class AlertActiveWorkerTests
     }
 
     [Theory]
-    [InlineData(Status.Actual, null, null, null, null, null, null, null, 50)]
+    // The line below used to work - Now it doesn't. API's limit parameter doesn't
+    // appear to be working.
+    // [InlineData(Status.Actual, null, null, null, null, null, null, null, 50)]
     [InlineData(Status.Test, MessageType.Alert, null, null, null, null, null, null, 13)]
     [InlineData(Status.System, MessageType.Update, Areas.OR, null, null, null, null, null, 100)]
     [InlineData(Status.Exercise, MessageType.Cancel, Areas.OR, Region.AT, null, null, null, null, 75)]
