@@ -32,7 +32,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Products\" />
     <Folder Include="Radar\" />
   </ItemGroup>
 
