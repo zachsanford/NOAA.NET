@@ -9,8 +9,8 @@ public class ProductsWorkerTests
     [InlineData(null, null, null)]
     [InlineData(WFO.MFR, null, null)]
     [InlineData(WFO.MRX, ProductCode.SFP, null)]
-    [InlineData(WFO.EKA, null, 15)]
-    [InlineData(null, ProductCode.SFT, 10)]
+    [InlineData(WFO.EKA, null, (ushort)15)]
+    [InlineData(null, ProductCode.SFT, (ushort)10)]
     public async void Worker_Working_Constructor(WFO? locationParameter,
         ProductCode? typeParameter, ushort? limitParameter)
     {
