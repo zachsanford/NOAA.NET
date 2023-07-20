@@ -1,4 +1,4 @@
-﻿// <copyright file="ProductCodes.cs" company="Zach Sanford">
+﻿// <copyright file="ProductCode.cs" company="Zach Sanford">
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
@@ -9,7 +9,7 @@ namespace NOAA.NET.Types;
 /// <summary>
 /// Three-letter Product type codes enum.
 /// </summary>
-public enum ProductCodes
+public enum ProductCode
 {
     /// <summary>
     /// Rawinsonde Data Above 100 Millibars.
