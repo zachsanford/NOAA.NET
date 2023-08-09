@@ -1,15 +1,15 @@
-﻿// <copyright file="ZoneBuilder.cs" company="Zach Sanford">
+﻿// <copyright file="ZoneBaseBuilder.cs" company="Zach Sanford">
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
 using NOAA.NET.Types;
 
-namespace NOAA.NET.Zones;
+namespace NOAA.NET.Zones.Base;
 
 /// <summary>
 /// Builder class for the Zones Endpoint.
 /// </summary>
-public sealed class ZoneBuilder
+public sealed class ZoneBaseBuilder
 {
     /// <summary>
     /// Gets or sets the Zone ID property.

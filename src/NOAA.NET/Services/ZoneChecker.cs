@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using NOAA.NET.Interfaces;
 using NOAA.NET.Services.Network;
-using NOAA.NET.Zones;
+using NOAA.NET.Zones.Base;
 
 [assembly: InternalsVisibleTo("NOAA.NET.Tests")]
 
@@ -19,7 +19,7 @@ namespace NOAA.NET.Services;
 /// Internal class used to check the validity
 /// of a zone input.
 /// </summary>
-internal sealed class ZoneChecker : IWorker<ZoneResponse>
+internal sealed class ZoneChecker : IWorker<ZoneBaseResponse>
 {
     private ZoneClient _client = new();
     private StringBuilder _stringBuilder = new("?id=");
@@ -53,11 +53,11 @@ internal sealed class ZoneChecker : IWorker<ZoneResponse>
     /// <summary>
     /// Calls the API's Zones Endpoint.
     /// </summary>
-    /// <returns><see cref="ZoneResponse"/> payload.</returns>
+    /// <returns><see cref="ZoneBaseResponse"/> payload.</returns>
     /// <exception cref="Exception">NULL Exception.</exception>
-    public async Task<ZoneResponse> CallEndpointAsync()
+    public async Task<ZoneBaseResponse> CallEndpointAsync()
     {
-        ZoneResponse? zoneResponse;
+        ZoneBaseResponse? zoneResponse;
 
         zoneResponse = await this._client.CallAPI();
 
@@ -79,7 +79,7 @@ internal sealed class ZoneChecker : IWorker<ZoneResponse>
     {
         try
         {
-            ZoneResponse testResponse = await this.CallEndpointAsync();
+            ZoneBaseResponse testResponse = await this.CallEndpointAsync();
 
             if (testResponse.Features != null)
             {

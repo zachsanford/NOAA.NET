@@ -1,15 +1,15 @@
-﻿// <copyright file="ZoneResponse.cs" company="Zach Sanford">
+﻿// <copyright file="ZoneBaseResponse.cs" company="Zach Sanford">
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-namespace NOAA.NET.Zones;
+namespace NOAA.NET.Zones.Base;
 
 /// <summary>
 /// A GeoJSON feature collection. Please refer
 /// to IETF RFC 7946 for information on the
 /// GeoJSON format.
 /// </summary>
-public class ZoneResponse
+public class ZoneBaseResponse
 {
     /// <summary>
     /// Gets or sets the Type property.

@@ -5,7 +5,7 @@
 using System;
 using System.Text.Json.Serialization;
 
-namespace NOAA.NET.Zones;
+namespace NOAA.NET.Zones.Base;
 
 /// <summary>
 /// An object summarization of the properties

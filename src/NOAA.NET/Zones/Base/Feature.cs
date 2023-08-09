@@ -2,7 +2,7 @@
 // Copyright (c) Zach Sanford. All rights reserved.
 // </copyright>
 
-namespace NOAA.NET.Zones;
+namespace NOAA.NET.Zones.Base;
 
 /// <summary>
 /// A representation of a GeoJSON feature. Please
