@@ -9,7 +9,7 @@ namespace NOAA.NET.Services.Network;
 /// <summary>
 /// Http client for the Zones endpoint of the API.
 /// </summary>
-internal sealed class ZoneClient : NOAAClient<ZoneBaseResponse>
+internal sealed class ZoneClient : NOAAClient<ZonesBaseResponse>
 {
     /// <inheritdoc/>
     protected override string BaseURL { get; } = @"https://api.weather.gov/zones";

@@ -19,7 +19,7 @@ namespace NOAA.NET.Services;
 /// Internal class used to check the validity
 /// of a zone input.
 /// </summary>
-internal sealed class ZoneChecker : IWorker<ZoneBaseResponse>
+internal sealed class ZoneChecker : IWorker<ZonesBaseResponse>
 {
     private ZoneClient _client = new();
     private StringBuilder _stringBuilder = new("?id=");
@@ -53,11 +53,11 @@ internal sealed class ZoneChecker : IWorker<ZoneBaseResponse>
     /// <summary>
     /// Calls the API's Zones Endpoint.
     /// </summary>
-    /// <returns><see cref="ZoneBaseResponse"/> payload.</returns>
+    /// <returns><see cref="ZonesBaseResponse"/> payload.</returns>
     /// <exception cref="Exception">NULL Exception.</exception>
-    public async Task<ZoneBaseResponse> CallEndpointAsync()
+    public async Task<ZonesBaseResponse> CallEndpointAsync()
     {
-        ZoneBaseResponse? zoneResponse;
+        ZonesBaseResponse? zoneResponse;
 
         zoneResponse = await this._client.CallAPI();
 
@@ -79,7 +79,7 @@ internal sealed class ZoneChecker : IWorker<ZoneBaseResponse>
     {
         try
         {
-            ZoneBaseResponse testResponse = await this.CallEndpointAsync();
+            ZonesBaseResponse testResponse = await this.CallEndpointAsync();
 
             if (testResponse.Features != null)
             {
