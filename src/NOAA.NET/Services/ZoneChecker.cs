@@ -21,7 +21,7 @@ namespace NOAA.NET.Services;
 /// </summary>
 internal sealed class ZoneChecker : IWorker<ZonesBaseResponse>
 {
-    private ZoneClient _client = new();
+    private ZonesBaseClient _client = new();
     private StringBuilder _stringBuilder = new("?id=");
 
     /// <summary>
