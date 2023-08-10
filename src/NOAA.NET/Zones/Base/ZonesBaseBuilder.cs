@@ -44,5 +44,5 @@ public sealed class ZonesBaseBuilder
     /// <summary>
     /// Gets or sets the Limit property.
     /// </summary>
-    public int? Limit { get; set; } = 50;
+    public ushort? Limit { get; set; } = 50;
 }
