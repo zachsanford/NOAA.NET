@@ -69,69 +69,76 @@ public sealed class ZonesBaseWorker : IWorker<ZonesBaseResponse>
         }
         else
         {
-            if (builder.ZoneId != null)
+            try
             {
-                this._zoneChecker = new(builder.ZoneId);
+                if (builder.ZoneId != null)
+                {
+                    this._zoneChecker = new(builder.ZoneId);
 
-                if (await this._zoneChecker.TestZone())
+                    if (await this._zoneChecker.TestZone())
+                    {
+                        if (!this._isFirst)
+                        {
+                            this._stringBuilder.Append("&");
+                        }
+
+                        this._stringBuilder.Append("id=" + builder.ZoneId);
+                        this._isFirst = false;
+                    }
+                }
+
+                if (builder.Type != null &&
+                        builder.ZoneId == null)
                 {
                     if (!this._isFirst)
                     {
                         this._stringBuilder.Append("&");
                     }
 
-                    this._stringBuilder.Append("id=" + builder.ZoneId);
+                    this._stringBuilder.Append("type=" + builder.Type.GetStringValue());
                     this._isFirst = false;
                 }
-            }
 
-            if (builder.Type != null &&
-                    builder.ZoneId == null)
-            {
-                if (!this._isFirst)
+                if (builder.Point != null &&
+                        builder.ZoneId == null)
                 {
-                    this._stringBuilder.Append("&");
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("point=" + builder.Point);
+                    this._isFirst = false;
                 }
 
-                this._stringBuilder.Append("type=" + builder.Type.GetStringValue());
-                this._isFirst = false;
-            }
-
-            if (builder.Point != null &&
-                    builder.ZoneId == null)
-            {
-                if (!this._isFirst)
+                if (builder.IncludeGeometry != null)
                 {
-                    this._stringBuilder.Append("&");
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("include_geometry=" + builder.IncludeGeometry.Value.ToString().ToLower());
+                    this._isFirst = false;
                 }
 
-                this._stringBuilder.Append("point=" + builder.Point);
-                this._isFirst = false;
-            }
-
-            if (builder.IncludeGeometry != null)
-            {
-                if (!this._isFirst)
+                if (builder.Limit != null)
                 {
-                    this._stringBuilder.Append("&");
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("limit=" + builder.Limit.ToString());
+                    this._isFirst = false;
                 }
 
-                this._stringBuilder.Append("include_geometry=" + builder.IncludeGeometry.Value.ToString().ToLower());
-                this._isFirst = false;
+                this._client.EndpointURL = this._stringBuilder.ToString();
             }
-
-            if (builder.Limit != null)
+            catch (Exception ex)
             {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
-
-                this._stringBuilder.Append("limit=" + builder.Limit.ToString());
-                this._isFirst = false;
+                Console.WriteLine(ex);
             }
-
-            this._client.EndpointURL = this._stringBuilder.ToString();
         }
     }
 }

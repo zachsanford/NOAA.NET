@@ -69,58 +69,65 @@ public sealed class ObservationsWorker : IWorker<ObservationsResponse>
         }
         else
         {
-            if (builder.StationId != null)
+            try
             {
-                this._checker = new(builder.StationId);
-
-                if (await this._checker.TestStationId())
+                if (builder.StationId != null)
                 {
-                    this._stringBuilder.Append(builder.StationId.ToUpper());
-                    this._stringBuilder.Append("/observations?");
+                    this._checker = new(builder.StationId);
+
+                    if (await this._checker.TestStationId())
+                    {
+                        this._stringBuilder.Append(builder.StationId.ToUpper());
+                        this._stringBuilder.Append("/observations?");
+                    }
                 }
-            }
-            else
-            {
-                throw new Exception(message: "The Builder's StationId property is null." +
-                    "Please check your builder and try again.");
-            }
-
-            if (builder.Start != null)
-            {
-                if (!this._isFirst)
+                else
                 {
-                    this._stringBuilder.Append("&");
+                    throw new Exception(message: "The Builder's StationId property is null." +
+                        "Please check your builder and try again.");
                 }
 
-                this._stringBuilder.Append("start=");
-                this._stringBuilder.Append(builder.Start.Value.ToString("s") + 'Z');
-                this._isFirst = false;
-            }
-
-            if (builder.End != null)
-            {
-                if (!this._isFirst)
+                if (builder.Start != null)
                 {
-                    this._stringBuilder.Append("&");
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("start=");
+                    this._stringBuilder.Append(builder.Start.Value.ToString("s") + 'Z');
+                    this._isFirst = false;
                 }
 
-                this._stringBuilder.Append("end=");
-                this._stringBuilder.Append(builder.End.Value.ToString("s") + 'Z');
-                this._isFirst = false;
-            }
-
-            if (builder.Limit != null)
-            {
-                if (!this._isFirst)
+                if (builder.End != null)
                 {
-                    this._stringBuilder.Append("&");
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("end=");
+                    this._stringBuilder.Append(builder.End.Value.ToString("s") + 'Z');
+                    this._isFirst = false;
                 }
 
-                this._stringBuilder.Append("limit=");
-                this._stringBuilder.Append(builder.Limit.ToString());
-            }
+                if (builder.Limit != null)
+                {
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
 
-            this._client.EndpointURL = this._stringBuilder.ToString();
+                    this._stringBuilder.Append("limit=");
+                    this._stringBuilder.Append(builder.Limit.ToString());
+                }
+
+                this._client.EndpointURL = this._stringBuilder.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
     }
 }

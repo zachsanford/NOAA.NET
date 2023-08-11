@@ -70,112 +70,119 @@ public sealed class AlertActiveWorker : IWorker<AlertResponse>
         }
         else
         {
-            if (builder.Status != null)
+            try
             {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
-
-                this._stringBuilder.Append("status=" + builder.Status.GetStringValue());
-                this._isFirst = false;
-            }
-
-            if (builder.MessageType != null)
-            {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
-
-                this._stringBuilder.Append("message_type=" + builder.MessageType.GetStringValue());
-                this._isFirst = false;
-            }
-
-            if ((builder.Area != null && builder.Region == null && builder.Zone == null) ||
-                (builder.Area != null && builder.Region != null && builder.Zone == null))
-            {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
-
-                this._stringBuilder.Append("area=" + builder.Area);
-                this._isFirst = false;
-            }
-
-            if (builder.Region != null && builder.Area == null && builder.Zone == null)
-            {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
-
-                this._stringBuilder.Append("region=" + builder.Region.GetStringValue());
-                this._isFirst = false;
-            }
-
-            if (builder.Urgency != null)
-            {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
-
-                this._stringBuilder.Append("urgency=" + builder.Urgency.GetStringValue());
-                this._isFirst = false;
-            }
-
-            if (builder.Severity != null)
-            {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
-
-                this._stringBuilder.Append("severity=" + builder.Severity.GetStringValue());
-                this._isFirst = false;
-            }
-
-            if (builder.Certainty != null)
-            {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
-
-                this._stringBuilder.Append("certainty=" + builder.Certainty.GetStringValue());
-                this._isFirst = false;
-            }
-
-            if (builder.Zone != null)
-            {
-                this._zoneChecker = new(builder.Zone);
-
-                if (await this._zoneChecker.TestZone())
+                if (builder.Status != null)
                 {
                     if (!this._isFirst)
                     {
                         this._stringBuilder.Append("&");
                     }
 
-                    this._stringBuilder.Append("zone=" + builder.Zone);
+                    this._stringBuilder.Append("status=" + builder.Status.GetStringValue());
                     this._isFirst = false;
                 }
-            }
 
-            if (builder.Limit != null)
-            {
-                if (!this._isFirst)
+                if (builder.MessageType != null)
                 {
-                    this._stringBuilder.Append("&");
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("message_type=" + builder.MessageType.GetStringValue());
+                    this._isFirst = false;
                 }
 
-                this._stringBuilder.Append("limit=" + builder.Limit.ToString());
-                this._isFirst = false;
-            }
+                if ((builder.Area != null && builder.Region == null && builder.Zone == null) ||
+                    (builder.Area != null && builder.Region != null && builder.Zone == null))
+                {
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
 
-            this._client.EndpointURL = this._stringBuilder.ToString();
+                    this._stringBuilder.Append("area=" + builder.Area);
+                    this._isFirst = false;
+                }
+
+                if (builder.Region != null && builder.Area == null && builder.Zone == null)
+                {
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("region=" + builder.Region.GetStringValue());
+                    this._isFirst = false;
+                }
+
+                if (builder.Urgency != null)
+                {
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("urgency=" + builder.Urgency.GetStringValue());
+                    this._isFirst = false;
+                }
+
+                if (builder.Severity != null)
+                {
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("severity=" + builder.Severity.GetStringValue());
+                    this._isFirst = false;
+                }
+
+                if (builder.Certainty != null)
+                {
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("certainty=" + builder.Certainty.GetStringValue());
+                    this._isFirst = false;
+                }
+
+                if (builder.Zone != null)
+                {
+                    this._zoneChecker = new(builder.Zone);
+
+                    if (await this._zoneChecker.TestZone())
+                    {
+                        if (!this._isFirst)
+                        {
+                            this._stringBuilder.Append("&");
+                        }
+
+                        this._stringBuilder.Append("zone=" + builder.Zone);
+                        this._isFirst = false;
+                    }
+                }
+
+                if (builder.Limit != null)
+                {
+                    if (!this._isFirst)
+                    {
+                        this._stringBuilder.Append("&");
+                    }
+
+                    this._stringBuilder.Append("limit=" + builder.Limit.ToString());
+                    this._isFirst = false;
+                }
+
+                this._client.EndpointURL = this._stringBuilder.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
     }
 }

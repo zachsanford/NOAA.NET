@@ -69,68 +69,75 @@ public sealed class StationsWorker : IWorker<StationsResponse>
         }
         else
         {
-            if (builder.Id != null)
+            try
             {
-                this._checker = new(builder.Id);
+                if (builder.Id != null)
+                {
+                    this._checker = new(builder.Id);
 
-                if (await this._checker.TestStationId())
+                    if (await this._checker.TestStationId())
+                    {
+                        if (!this._isFirst)
+                        {
+                            this._stringBuilder.Append("&");
+                        }
+
+                        this._stringBuilder.Append("id=");
+                        this._stringBuilder.Append(builder.Id.ToUpper());
+                        this._isFirst = false;
+                    }
+                }
+
+                if (builder.State != null)
                 {
                     if (!this._isFirst)
                     {
                         this._stringBuilder.Append("&");
                     }
 
-                    this._stringBuilder.Append("id=");
-                    this._stringBuilder.Append(builder.Id.ToUpper());
+                    this._stringBuilder.Append("state=");
+                    this._stringBuilder.Append(builder.State.GetStringValue());
                     this._isFirst = false;
                 }
-            }
 
-            if (builder.State != null)
-            {
-                if (!this._isFirst)
+                if (builder.Limit != null)
                 {
-                    this._stringBuilder.Append("&");
+                    if (builder.Limit > 500)
+                    {
+                        throw new Exception(message: "The StationsBuilder Limit is greater than 500." +
+                            "The MAX value for this input is 500. Please check your builder and try again.");
+                    }
+                    else
+                    {
+                        if (!this._isFirst)
+                        {
+                            this._stringBuilder.Append("&");
+                        }
+
+                        this._stringBuilder.Append("limit=");
+                        this._stringBuilder.Append(builder.Limit.ToString());
+                        this._isFirst = false;
+                    }
                 }
 
-                this._stringBuilder.Append("state=");
-                this._stringBuilder.Append(builder.State.GetStringValue());
-                this._isFirst = false;
-            }
-
-            if (builder.Limit != null)
-            {
-                if (builder.Limit > 500)
-                {
-                    throw new Exception(message: "The StationsBuilder Limit is greater than 500." +
-                        "The MAX value for this input is 500. Please check your builder and try again.");
-                }
-                else
+                if (builder.Cursor != null)
                 {
                     if (!this._isFirst)
                     {
                         this._stringBuilder.Append("&");
                     }
 
-                    this._stringBuilder.Append("limit=");
-                    this._stringBuilder.Append(builder.Limit.ToString());
+                    this._stringBuilder.Append("cursor=");
+                    this._stringBuilder.Append(builder.Cursor);
                     this._isFirst = false;
                 }
-            }
 
-            if (builder.Cursor != null)
+                this._client.EndpointURL = this._stringBuilder.ToString();
+            }
+            catch (Exception ex)
             {
-                if (!this._isFirst)
-                {
-                    this._stringBuilder.Append("&");
-                }
-
-                this._stringBuilder.Append("cursor=");
-                this._stringBuilder.Append(builder.Cursor);
-                this._isFirst = false;
+                Console.WriteLine(ex);
             }
-
-            this._client.EndpointURL = this._stringBuilder.ToString();
         }
     }
 }
